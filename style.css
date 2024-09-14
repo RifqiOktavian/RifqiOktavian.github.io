@@ -1,0 +1,1232 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: rgb(30, 39, 51);
+    overflow-x: hidden;
+}
+
+.rifqiporto {
+    color: #fec195;
+    font-size: 25px;
+    margin-left: 30px;
+    margin-top: 20px;
+}
+
+.menu {
+    text-align: right;
+    list-style: none;
+    padding: 0;
+}
+
+.aboutme, .biodata, .experiencegallery, .myskill, .education {
+    color: white;
+    display: inline-block;
+    margin-right: -40px;
+    font-size: 18px;
+    text-decoration: none;
+}
+
+
+/*About Me*/
+.aboutme {
+    position: relative;
+    padding: 12px 35px;
+    font-size: 17px;
+    font-weight: 500;
+    color: white;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.aboutme .star-1,
+.aboutme .star-2,
+.aboutme .star-3,
+.aboutme .star-4,
+.aboutme .star-5,
+.aboutme .star-6 {
+    position: absolute;
+    top: 20%;
+    left: 20%;
+    width: auto;
+    height: auto;
+    filter: drop-shadow(0 0 0 rgb(30, 39, 51));
+    z-index: -5;
+    transition: all 1s cubic-bezier(0.05, 0.83, 0.43, 0.96);
+}
+
+.aboutme:hover {
+    color: #fec195;
+}
+
+.aboutme:hover .star-1,
+.aboutme:hover .star-2,
+.aboutme:hover .star-3,
+.aboutme:hover .star-4,
+.aboutme:hover .star-5,
+.aboutme:hover .star-6 {
+    filter: drop-shadow(0 0 0 #fff);
+    z-index: 2;
+}
+
+.aboutme:hover .star-1 {
+    top: 5%;
+    left: -2%;
+    width: 25px;
+    height: auto;
+    filter: drop-shadow(0 0 10px #fffdef);
+    z-index: 2;
+}
+
+.aboutme:hover .star-2 {
+    top: -25%;
+    left: 30%;
+    width: 15px;
+    height: auto;
+    filter: drop-shadow(0 0 10px #fffdef);
+    z-index: 2;
+}
+
+.aboutme:hover .star-3 {
+    top: 70%;
+    left: 30%;
+    width: 5px;
+    height: auto;
+    filter: drop-shadow(0 0 10px #fffdef);
+    z-index: 2;
+}
+
+.aboutme:hover .star-4 {
+    top: 70%;
+    left: 70%;
+    width: 8px;
+    height: auto;
+    filter: drop-shadow(0 0 10px #fffdef);
+    z-index: 2;
+}
+
+.aboutme:hover .star-5 {
+    top: -10%;
+    left: 80%;
+    width: 15px;
+    height: auto;
+    filter: drop-shadow(0 0 10px #fffdef);
+    z-index: 2;
+}
+
+.aboutme:hover .star-6 {
+    top: 5%;
+    left: 50%;
+    width: 5px;
+    height: auto;
+    filter: drop-shadow(0 0 10px #fffdef);
+    z-index: 2;
+}
+
+.fil0 {
+    fill: #fffdef;
+}
+
+/*Perkenalan*/
+.Nama {
+    overflow: hidden; /* Clear float */
+}
+
+.judul {
+    color: white;
+    font-size: 24px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    float: left; /* Membuat judul berada di sebelah kiri */
+    clear: left; /* Membersihkan float sebelum elemen selanjutnya */
+    width: 100%; /* Memastikan judul mengambil lebar penuh */
+    margin-left: 30px;
+    margin-top: 40px;
+}
+
+.judul2 {
+    color: #fec195;
+    font-size: 20px;
+    float: left; /* Membuat judul2 berada di sebelah kiri */
+    clear: left; /* Membersihkan float sebelum elemen selanjutnya */
+    width: 100%; /* Memastikan judul2 mengambil lebar penuh */
+    margin-left: 30px;
+    margin-top: 4px;
+}
+
+.ketjudul {
+    color: white;
+    margin-left: 30px;
+    margin-top: 10px;
+    float: left; /* Membuat ketjudul berada di sebelah kiri */
+    clear: left; /* Membersihkan float sebelum elemen selanjutnya */
+    width: 100%; /* Memastikan ketjudul mengambil lebar penuh */
+    max-width: 600px; /* Batasi lebar maksimum teks */
+    word-wrap: break-word; /* Memastikan kata-kata yang panjang tetap dapat dibungkus */
+}
+
+.gambar1 {
+    float: right;
+    width: 320px;
+    height: 300px;
+    margin-top: -70px;
+    margin-right: 100px;
+}
+
+.gambar1 {
+  position: relative;
+  animation: slideInFromRight 1s forwards;
+  opacity: 0;
+}
+
+@keyframes slideInFromRight {
+  0% {
+      transform: translateX(100%);
+      opacity: 0;
+  }
+  100% {
+      transform: translateX(0);
+      opacity: 1;
+  }
+}
+
+/*Tombol Hubungi Saya*/
+.hubungisaya1 {
+  color: white;
+  text-decoration: none;
+}
+
+.hubungisaya1 span:last-child {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 20px;
+  height: 20px;
+  background-color: #fec195;
+  border-radius: 40px;
+  opacity: 0;
+  transition: all 0.8s cubic-bezier(0.23, 1, 0.320, 1);
+}
+
+.hubungisaya1 span:first-child {
+  position: relative;
+  z-index: 1;
+}
+
+.hubungisaya1:active {
+  transform: scale(0.95); /* Efek scaling saat tombol ditekan */
+}
+
+.hubungisaya1:hover span:last-child {
+  width: 150px;
+  height: 150px;
+  opacity: 1;
+}
+
+.hubungisaya1:hover {
+  color:black ;
+}
+
+.hubungisaya {
+    margin-top: -30px;
+    margin-left: 30px;
+    position: relative;
+    display: inline-block;
+    padding: 12px 24px;
+    border: none;
+    font-size: 16px;
+    background-color: inherit;
+    border-radius: 40px;
+    font-weight: 600;
+    color: white;
+    box-shadow: 0 0 0 2px #ffffff20;
+    cursor: pointer;
+    overflow: hidden;
+    transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
+  }
+  
+  .hubungisaya span:last-child {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 20px;
+    height: 20px;
+    background-color: #fec195;
+    border-radius: 40px;
+    opacity: 0;
+    transition: all 0.8s cubic-bezier(0.23, 1, 0.320, 1);
+  }
+  
+  .hubungisaya span:first-child {
+    position: relative;
+    z-index: 1;
+  }
+  
+  .hubungisaya:hover {
+    box-shadow: 0 0 20px 5px rgba(254, 193, 149, 0.6); /* Efek shadow box dengan warna hijau */
+    color: black; /* Warna teks ketika di-hover */
+  }
+  
+  .hubungisaya:active {
+    transform: scale(0.95); /* Efek scaling saat tombol ditekan */
+  }
+  
+  .hubungisaya:hover span:last-child {
+    width: 150px;
+    height: 150px;
+    opacity: 1;
+  }
+
+  /*Informasi*/
+  ul {
+    list-style: none;
+  }
+  
+  .example-2 {
+    display: flex;
+    justify-content: left;
+    align-items: left;
+  }
+  .example-2 .icon-content {
+    margin: 0 10px;
+    position: relative;
+  }
+  .example-2 .icon-content .tooltip {
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #fff;
+    padding: 6px 10px;
+    margin-left: 30px;
+    border-radius: 5px;
+    opacity: 0;
+    visibility: hidden;
+    font-size: 14px;
+    transition: all 0.3s ease;
+  }
+  .example-2 .icon-content:hover .tooltip {
+    opacity: 1;
+    visibility: visible;
+    top: 30px;
+  }
+  .example-2 .icon-content a {
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    margin-top: 80px;
+    left: 30px;
+    border-radius: 50%;
+    color: #4d4d4d;
+    background-color: #fff;
+    transition: all 0.3s ease-in-out;
+  }
+  .example-2 .icon-content a:hover {
+    box-shadow: 3px 2px 45px 0px rgb(0 0 0 / 12%);
+  }
+  .example-2 .icon-content a svg {
+    position: relative;
+    z-index: 1;
+    width: 20px;
+    height: 20px;
+  }
+  .example-2 .icon-content a:hover {
+    color: white;
+  }
+  .example-2 .icon-content a .filled {
+    position: absolute;
+    top: auto;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    background-color: #000;
+    transition: all 0.3s ease-in-out;
+  }
+  .example-2 .icon-content a:hover .filled {
+    height: 100%;
+  }
+  
+  .example-2 .icon-content a[data-social="gmail"] .filled,
+  .example-2 .icon-content a[data-social="gmail"] ~ .tooltip {
+    background-color: #f84242;
+  }
+  
+  .example-2 .icon-content a[data-social="telegram"] .filled,
+  .example-2 .icon-content a[data-social="telegram"] ~ .tooltip {
+    background-color: #52bfea;
+  }
+  .example-2 .icon-content a[data-social="instagram"] .filled,
+  .example-2 .icon-content a[data-social="instagram"] ~ .tooltip {
+    background: linear-gradient(
+      45deg,
+      #405de6,
+      #5b51db,
+      #b33ab4,
+      #c135b4,
+      #e1306c,
+      #fd1f1f
+    );
+  }
+  .example-2 .icon-content a[data-social="linkedin"] .filled,
+  .example-2 .icon-content a[data-social="linkedin"] ~ .tooltip {
+    background-color: #1676c4;
+  }
+  
+
+/* Biodata */
+.biodata {
+    position: relative;
+    padding: 12px 35px;
+    font-size: 17px;
+    font-weight: 500;
+    color: white;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.biodata .biostar-1,
+.biodata .biostar-2,
+.biodata .biostar-3,
+.biodata .biostar-4,
+.biodata .biostar-5,
+.biodata .biostar-6 {
+    position: absolute;
+    top: 20%;
+    left: 20%;
+    width: auto;
+    height: auto;
+    filter: drop-shadow(0 0 0 rgb(30, 39, 51)); 
+    z-index: -5;
+    transition: all 1s cubic-bezier(0.05, 0.83, 0.43, 0.96);
+}
+
+.biodata:hover {
+    color: #fec195; 
+}
+
+.biodata:hover .biostar-1,
+.biodata:hover .biostar-2,
+.biodata:hover .biostar-3,
+.biodata:hover .biostar-4,
+.biodata:hover .biostar-5,
+.biodata:hover .biostar-6 {
+    filter: drop-shadow(0 0 0 #fff); 
+    z-index: 2;
+}
+
+.biodata:hover .biostar-1 {
+    top: 5%; 
+    left: -2%; 
+    width: 25px;
+    height: auto;
+    filter: drop-shadow(0 0 10px #fffdef);
+    z-index: 2;
+}
+
+.biodata:hover .biostar-2 {
+    top: -25%; 
+    left: 30%; 
+    width: 15px;
+    height: auto;
+    filter: drop-shadow(0 0 10px #fffdef);
+    z-index: 2;
+}
+
+.biodata:hover .biostar-3 {
+    top: 70%; 
+    left: 30%; 
+    width: 5px;
+    height: auto;
+    filter: drop-shadow(0 0 10px #fffdef);
+    z-index: 2;
+}
+
+.biodata:hover .biostar-4 {
+    top: 70%; 
+    left: 70%; 
+    width: 8px;
+    height: auto;
+    filter: drop-shadow(0 0 10px #fffdef);
+    z-index: 2;
+}
+
+.biodata:hover .biostar-5 {
+    top: -10%; 
+    left: 80%; 
+    width: 15px;
+    height: auto;
+    filter: drop-shadow(0 0 10px #fffdef);
+    z-index: 2;
+}
+
+.biodata:hover .biostar-6 {
+    top: 5%; 
+    left: 50%; 
+    width: 5px;
+    height: auto;
+    filter: drop-shadow(0 0 10px #fffdef);
+    z-index: 2;
+}
+
+.biofil0 {
+    fill: #fffdef;
+}
+
+
+/*Isi Biodata*/
+.judulbio {
+    overflow: hidden;
+}
+
+.biodata1 {
+    color: #fec195;
+    font-size: 24px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin-top: 20px;
+}
+
+.biodata2 {
+    color: white;
+    font-size: 20px;
+    margin-top: 4px;
+    margin-bottom: 50px;
+}
+
+.gambar2 {
+  float: left; /* Menggeser gambar ke sebelah kiri */
+  clear: left;
+  width: 300px; /* Atur lebar gambar sesuai kebutuhan */
+  height: 300px;
+  margin-top: -30px;
+  margin-right: 250px;
+  margin-left: 50px;
+}
+
+.gambar2 {
+  position: relative;
+  animation: slideInFromLeft 1s forwards;
+  opacity: 0;
+}
+
+@keyframes slideInFromLeft {
+  0% {
+      transform: translateX(-100%);
+      opacity: 0;
+  }
+  100% {
+      transform: translateX(0);
+      opacity: 1;
+  }
+}
+
+.mybio {
+  color: white;
+  margin-right: 600px;
+  margin-bottom: 20px;
+  margin-top: -20px;
+  word-wrap: break-word;
+}
+
+.ketbio {
+    color: white;
+    margin-top: -10px;
+    margin-bottom: 20px;
+    margin-right: 40px;
+    word-wrap: break-word; 
+
+}
+
+.container1 {
+  border: 1px solid white; 
+  float: right;
+  margin-right: 60px;
+  margin-top: -30px;
+  width: 625px;
+  height: 240px;
+  border-radius: 5px;
+}
+
+.container1:hover {
+  background-color: #0b487a;
+  color: #000; 
+  transform: scale(1.05); 
+}
+
+/* Baris Kiri */
+.bariskiri {
+  list-style: none;
+  float: left; 
+  width: 50%; 
+}
+
+.li1nama, .li1status, .li1nomor {
+  color: white;
+  font-size: 18px;
+  margin-top: 20px;
+  margin-left: 40px;
+  margin-bottom: 10px;
+}
+
+.p1nama, .p1status, .p1nomor {
+  font-size: 16px;
+  color: #fec195;
+  margin-bottom: 20px;
+  margin-left: 40px;
+}
+
+/* Baris Kanan */
+.bariskanan {
+  list-style: none;
+  float: right; 
+  clear: right;
+  width: 50%; 
+}
+
+.li2email, .li2jenkel, .li2umur {
+  color: white;
+  font-size: 18px;
+  margin-left: 40px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.p2email,.p2jenkel,.p2umur {
+  font-size: 16px;
+  color: #fec195;
+  margin-bottom: 20px;
+  margin-left: 40px;
+}
+
+
+/*Experience Gallery*/
+/* .experiencegallery {
+    position: relative;
+    padding: 12px 35px;
+    font-size: 17px;
+    font-weight: 500;
+    color: white;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.experiencegallery .experstar-1,
+.experiencegallery .experstar-2,
+.experiencegallery .experstar-3,
+.experiencegallery .experstar-4,
+.experiencegallery .experstar-5,
+.experiencegallery .experstar-6 {
+    position: absolute;
+    top: 20%;
+    left: 20%;
+    width: auto;
+    height: auto;
+    filter: drop-shadow(0 0 0 rgb(30, 39, 51)); 
+    z-index: -5;
+    transition: all 1s cubic-bezier(0.05, 0.83, 0.43, 0.96);
+}
+
+.experiencegallery:hover {
+    color: #fec195; 
+}
+
+.experiencegallery:hover .experstar-1,
+.experiencegallery:hover .experstar-2,
+.experiencegallery:hover .experstar-3,
+.experiencegallery:hover .experstar-4,
+.experiencegallery:hover .experstar-5,
+.experiencegallery:hover .experstar-6 {
+    filter: drop-shadow(0 0 0 #fff); 
+    z-index: 2;
+}
+
+.experiencegallery:hover .experstar-1 {
+    top: 5%; 
+    left: -2%; 
+    width: 25px;
+    height: auto;
+    filter: drop-shadow(0 0 10px #fffdef);
+    z-index: 2;
+}
+
+.experiencegallery:hover .experstar-2 {
+    top: -25%; 
+    left: 30%; 
+    width: 15px;
+    height: auto;
+    filter: drop-shadow(0 0 10px #fffdef);
+    z-index: 2;
+}
+
+.experiencegallery:hover .experstar-3 {
+    top: 70%; 
+    left: 30%; 
+    width: 5px;
+    height: auto;
+    filter: drop-shadow(0 0 10px #fffdef);
+    z-index: 2;
+}
+
+.experiencegallery:hover .experstar-4 {
+    top: 70%; 
+    left: 70%; 
+    width: 8px;
+    height: auto;
+    filter: drop-shadow(0 0 10px #fffdef);
+    z-index: 2;
+}
+
+.experiencegallery:hover .experstar-5 {
+    top: -10%; 
+    left: 80%; 
+    width: 15px;
+    height: auto;
+    filter: drop-shadow(0 0 10px #fffdef);
+    z-index: 2;
+}
+
+.experiencegallery:hover .experstar-6 {
+    top: 5%; 
+    left: 50%; 
+    width: 5px;
+    height: auto;
+    filter: drop-shadow(0 0 10px #fffdef);
+    z-index: 2;
+}
+
+.experfil0 {
+    fill: #fffdef;
+} */
+
+/* Isi Experience Gallery*/
+
+/* .isiexper2 {
+  display: flex;
+  flex-wrap: wrap; 
+  justify-content: space-between; 
+}
+
+.judulexper1 {
+  color: #fec195;
+  font-size: 24px;
+}
+
+.judulexper2 {
+  color: white;
+  font-size: 20px;
+}
+
+.container2 {
+  border: 1px solid white;
+  width: calc(50% - 40px); 
+  height: 200px;
+  margin-top: 40px;
+  margin-left: 20px; 
+  margin-right: 20px;
+  border-radius: 9px;
+}
+
+.container2:hover {
+  background-color: #0b487a;
+  color: #000; 
+  transform: scale(1.05); 
+}
+
+.gambarexper1 {
+  width: 170px;
+  height: 150px;
+  float: left;
+  margin-right: 20px;
+  margin-top: 20px;
+  margin-left: 20px;
+}
+
+.judulisianexper {
+  color: white;
+  font-size: 18px;
+  margin-top: 20px;
+}
+
+.isianexper {
+  color: white;
+  font-size: 16px;
+  margin-right: 20px;
+  margin-top: 20px;
+} */
+
+
+/*My Skill*/
+.myskill {
+    position: relative;
+    padding: 12px 35px;
+    font-size: 17px;
+    font-weight: 500;
+    color: white;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.myskill .skillstar-1,
+.myskill .skillstar-2,
+.myskill .skillstar-3,
+.myskill .skillstar-4,
+.myskill .skillstar-5,
+.myskill .skillstar-6 {
+    position: absolute;
+    top: 20%;
+    left: 20%;
+    width: auto;
+    height: auto;
+    filter: drop-shadow(0 0 0 rgb(30, 39, 51)); 
+    z-index: -5;
+    transition: all 1s cubic-bezier(0.05, 0.83, 0.43, 0.96);
+}
+
+.myskill:hover {
+    color: #fec195; 
+}
+
+.myskill:hover .skillstar-1,
+.myskill:hover .skillstar-2,
+.myskill:hover .skillstar-3,
+.myskill:hover .skillstar-4,
+.myskill:hover .skillstar-5,
+.myskill:hover .skillstar-6 {
+    filter: drop-shadow(0 0 0 #fff); 
+    z-index: 2;
+}
+
+.myskill:hover .skillstar-1 {
+    top: 5%; 
+    left: -2%; 
+    width: 25px;
+    height: auto;
+    filter: drop-shadow(0 0 10px #fffdef);
+    z-index: 2;
+}
+
+.myskill:hover .skillstar-2 {
+    top: -25%; 
+    left: 30%; 
+    width: 15px;
+    height: auto;
+    filter: drop-shadow(0 0 10px #fffdef);
+    z-index: 2;
+}
+
+.myskill:hover .skillstar-3 {
+    top: 70%; 
+    left: 30%; 
+    width: 5px;
+    height: auto;
+    filter: drop-shadow(0 0 10px #fffdef);
+    z-index: 2;
+}
+
+.myskill:hover .skillstar-4 {
+    top: 70%; 
+    left: 70%; 
+    width: 8px;
+    height: auto;
+    filter: drop-shadow(0 0 10px #fffdef);
+    z-index: 2;
+}
+
+.myskill:hover .skillstar-5 {
+    top: -10%; 
+    left: 80%; 
+    width: 15px;
+    height: auto;
+    filter: drop-shadow(0 0 10px #fffdef);
+    z-index: 2;
+}
+
+.myskill:hover .skillstar-6 {
+    top: 5%; 
+    left: 50%; 
+    width: 5px;
+    height: auto;
+    filter: drop-shadow(0 0 10px #fffdef);
+    z-index: 2;
+}
+
+.skillfil0 {
+    fill: #fffdef;
+}
+
+
+/*Isian Skill*/
+
+.isiskill2 {
+  display: flex;
+}
+
+.judulskill1 {
+  color: #fec195;
+  font-size: 24px;
+}
+
+.judulskill2 {
+  color: white;
+  font-size: 20px;
+}
+
+.box1,.box2,.box3,.box4,.box5,.box6,.box7,.box8 {
+  background-color: rgb(30, 39, 51);
+  border-radius: 9px;
+  width: 150px;
+  height: 150px;
+  margin-left: 45px;
+  box-shadow: -1px 1px 15px rgb(74, 40, 105);
+}
+
+.box1:hover,
+.box2:hover,
+.box3:hover,
+.box4:hover,
+.box5:hover,
+.box6:hover,
+.box7:hover,
+.box8:hover {
+  background-color: #0b487a;
+  color: #000; 
+  transform: scale(1.05); 
+}
+
+.gambarbox1 {
+  width: 130px;
+  height: 100px;
+  margin-left: 8px;
+  margin-top: 13px;
+}
+
+.gambarbox2 {
+  width: 130px;
+  height: 100px;
+  margin-left: 8px;
+  margin-top: 13px;
+}
+
+.gambarbox3 {
+  width: 100px;
+  height: 100px;
+  margin-left: 25px;
+  margin-top: 13px;
+}
+
+.gambarbox4 {
+  width: 110px;
+  height: 100px;
+  margin-left: 20px;
+  margin-top: 13px;
+}
+
+.gambarbox5 {
+  width: 100px;
+  height: 60px;
+  margin-left: 25px;
+  margin-top: 30px;
+}
+
+.gambarbox6 {
+  width: 100px;
+  height: 100px;
+  margin-left: 25px;
+  margin-top: 13px;
+}
+
+.nametag1 {
+  color: white;
+  margin-left: 50px;
+  margin-top: 3px;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+
+.nametag2 {
+  color: white;
+  margin-left: 60px;
+  margin-top: 3px;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+
+.nametag3 {
+  color: white;
+  margin-left: 40px;
+  margin-top: 2px;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+
+.nametag4 {
+  color: white;
+  margin-left: 40px;
+  margin-top: 2px;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+
+.nametag5 {
+  color: white;
+  margin-left: 60px;
+  margin-top: 25px;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+
+.nametag6 {
+  color: white;
+  font-size: 14px;
+  margin-left: 27px;
+  margin-top: 2px;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+
+/*Box Bawah*/
+.isiskill3 {
+  display: flex;
+  justify-content: center;
+  margin-right: 95px;
+}
+.box7,.box8 {
+  background-color: rgb(30, 39, 51);
+  width: 150px;
+  height: 150px;
+  margin-left: 45px;
+  box-shadow: -1px 1px 15px rgb(74, 40, 105);
+  margin-top: 20px;
+}
+
+.gambarbox7 {
+  width: 100px;
+  height: 100px;
+  margin-left: 25px;
+  margin-top: 13px;
+}
+
+.gambarbox8 {
+  width: 100px;
+  height: 100px;
+  margin-left: 25px;
+  margin-top: 13px;
+}
+
+.nametag7 {
+  color: white;
+  margin-left: 35px;
+  margin-top: 2px;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+
+.nametag8 {
+  color: white;
+  margin-left: 53px;
+  margin-top: 2px;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+
+
+/*Education*/
+.education {
+    position: relative;
+    padding: 12px 35px; 
+    font-size: 17px;
+    font-weight: 500;
+    color: white;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+    text-decoration: none; 
+    margin-right: 20px; 
+
+}
+  .education .edustar-1,
+  .education .edustar-2,
+  .education .edustar-3,
+  .education .edustar-4,
+  .education .edustar-5,
+  .education .edustar-6 {
+    position: absolute;
+    top: 20%;
+    left: 20%;
+    width: auto;
+    height: auto;
+    filter: drop-shadow(0 0 0 rgb(30, 39, 51)); 
+    z-index: -5;
+    transition: all 1s cubic-bezier(0.05, 0.83, 0.43, 0.96);
+  }
+  
+  .education:hover {
+    color: #fec195; 
+  }
+  
+  .education:hover .edustar-1,
+  .education:hover .edustar-2,
+  .education:hover .edustar-3,
+  .education:hover .edustar-4,
+  .education:hover .edustar-5,
+  .education:hover .edustar-6 {
+    filter: drop-shadow(0 0 0 #fff); 
+    z-index: 2;
+  }
+  
+  .education:hover .edustar-1 {
+    top: 5%; 
+    left: -2%; 
+    width: 25px;
+    height: auto;
+    filter: drop-shadow(0 0 10px #fffdef);
+    z-index: 2;
+  }
+  
+  .education:hover .edustar-2 {
+    top: -25%; 
+    left: 30%; 
+    width: 15px;
+    height: auto;
+    filter: drop-shadow(0 0 10px #fffdef);
+    z-index: 2;
+  }
+  
+  .education:hover .edustar-3 {
+    top: 70%; 
+    left: 30%; 
+    width: 5px;
+    height: auto;
+    filter: drop-shadow(0 0 10px #fffdef);
+    z-index: 2;
+  }
+  
+  .education:hover .edustar-4 {
+    top: 70%; 
+    left: 70%; 
+    width: 8px;
+    height: auto;
+    filter: drop-shadow(0 0 10px #fffdef);
+    z-index: 2;
+  }
+  
+  .education:hover .edustar-5 {
+    top: -10%; 
+    left: 80%; 
+    width: 15px;
+    height: auto;
+    filter: drop-shadow(0 0 10px #fffdef);
+    z-index: 2;
+  }
+  
+  .education:hover .edustar-6 {
+    top: 5%; 
+    left: 50%; 
+    width: 5px;
+    height: auto;
+    filter: drop-shadow(0 0 10px #fffdef);
+    z-index: 2;
+  }
+  
+  .edufil0 {
+    fill: #fffdef;
+  }
+
+.juduledu1 {
+  margin-top: 20px;
+  color:  #fec195;
+  font-size: 24px;
+}
+
+.juduledu2 {
+  color: white;
+  font-size: 20px;
+  margin-bottom: 60px;
+}
+
+.gambaredu1 {
+  float: left;
+  clear: left;
+  width: 350px;
+  height: 400px;
+  margin-right: 250px;
+  margin-left: 30px;
+}
+
+.gambaredu1 {
+  position: relative;
+  animation: slideInFromLeft 1s forwards;
+  opacity: 0;
+}
+
+@keyframes slideInFromLeft {
+  0% {
+      transform: translateX(-100%);
+      opacity: 0;
+  }
+  100% {
+      transform: translateX(0);
+      opacity: 1;
+  }
+}
+  
+.ketedu1 {
+  color: white;
+  margin-right: 450px;
+  margin-bottom: 5px;
+  word-wrap: break-word;
+}
+
+.ketedu2 {
+    color: white;
+    margin-top: 10px;
+    margin-right: 40px;
+    word-wrap: break-word;
+}
+
+.ketedu3 {
+  color: white;
+}
+
+.containerpembatas {
+  border: #fec195 solid;
+  width: 600px;
+  height: 1px;
+  float: right;
+  margin-right: 33px;
+}
+
+.ketedu4 {
+  color: white;
+  margin-right: 450px;
+  margin-bottom: 5px;
+  word-wrap: break-word;
+}
+
+.ketedu5 {
+    color: white;
+    margin-top: 10px;
+    margin-right: 40px;
+    word-wrap: break-word;
+}
+
+.ketedu6 {
+  color: white;
+}
+
+.ketedu1,.ketedu2,.ketedu3,.ketedu4,.ketedu5,.ketedu6 {
+  margin-left: 10px;
+  list-style : circle;
+}
+
+/* Hidden elements are initially invisible */
+.hidden {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+/* When elements appear, they become visible */
+.hidden.show {
+  opacity: 1;
+  transform: translateY(0);
+}

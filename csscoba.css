@@ -1,0 +1,1102 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: rgb(30, 39, 51);
+    overflow-x: hidden;
+}
+
+.rifqiporto {
+    color: #fec195;
+    font-size: 25px;
+}
+
+.menu {
+    text-align: right;
+    list-style: none;
+    padding: 0;
+}
+
+.aboutme, .biodata, .experiencegallery, .myskill, .education {
+    color: white;
+    display: inline-block;
+    margin-right: -40px;
+    font-size: 18px;
+    text-decoration: none;
+}
+
+
+/*About Me*/
+.aboutme {
+    position: relative;
+    padding: 12px 35px;
+    font-size: 17px;
+    font-weight: 500;
+    color: white;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.aboutme .star-1,
+.aboutme .star-2,
+.aboutme .star-3,
+.aboutme .star-4,
+.aboutme .star-5,
+.aboutme .star-6 {
+    position: absolute;
+    top: 20%;
+    left: 20%;
+    width: auto;
+    height: auto;
+    filter: drop-shadow(0 0 0 rgb(30, 39, 51));
+    z-index: -5;
+    transition: all 1s cubic-bezier(0.05, 0.83, 0.43, 0.96);
+}
+
+.aboutme:hover {
+    color: #fec195;
+}
+
+.aboutme:hover .star-1,
+.aboutme:hover .star-2,
+.aboutme:hover .star-3,
+.aboutme:hover .star-4,
+.aboutme:hover .star-5,
+.aboutme:hover .star-6 {
+    filter: drop-shadow(0 0 0 #fff);
+    z-index: 2;
+}
+
+.aboutme:hover .star-1 {
+    top: 5%;
+    left: -2%;
+    width: 25px;
+    height: auto;
+    filter: drop-shadow(0 0 10px #fffdef);
+    z-index: 2;
+}
+
+.aboutme:hover .star-2 {
+    top: -25%;
+    left: 30%;
+    width: 15px;
+    height: auto;
+    filter: drop-shadow(0 0 10px #fffdef);
+    z-index: 2;
+}
+
+.aboutme:hover .star-3 {
+    top: 70%;
+    left: 30%;
+    width: 5px;
+    height: auto;
+    filter: drop-shadow(0 0 10px #fffdef);
+    z-index: 2;
+}
+
+.aboutme:hover .star-4 {
+    top: 70%;
+    left: 70%;
+    width: 8px;
+    height: auto;
+    filter: drop-shadow(0 0 10px #fffdef);
+    z-index: 2;
+}
+
+.aboutme:hover .star-5 {
+    top: -10%;
+    left: 80%;
+    width: 15px;
+    height: auto;
+    filter: drop-shadow(0 0 10px #fffdef);
+    z-index: 2;
+}
+
+.aboutme:hover .star-6 {
+    top: 5%;
+    left: 50%;
+    width: 5px;
+    height: auto;
+    filter: drop-shadow(0 0 10px #fffdef);
+    z-index: 2;
+}
+
+.fil0 {
+    fill: #fffdef;
+}
+
+/* Biodata */
+.biodata {
+    position: relative;
+    padding: 12px 35px;
+    font-size: 17px;
+    font-weight: 500;
+    color: white;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.biodata .biostar-1,
+.biodata .biostar-2,
+.biodata .biostar-3,
+.biodata .biostar-4,
+.biodata .biostar-5,
+.biodata .biostar-6 {
+    position: absolute;
+    top: 20%;
+    left: 20%;
+    width: auto;
+    height: auto;
+    filter: drop-shadow(0 0 0 rgb(30, 39, 51)); 
+    z-index: -5;
+    transition: all 1s cubic-bezier(0.05, 0.83, 0.43, 0.96);
+}
+
+.biodata:hover {
+    color: #fec195; 
+}
+
+.biodata:hover .biostar-1,
+.biodata:hover .biostar-2,
+.biodata:hover .biostar-3,
+.biodata:hover .biostar-4,
+.biodata:hover .biostar-5,
+.biodata:hover .biostar-6 {
+    filter: drop-shadow(0 0 0 #fff); 
+    z-index: 2;
+}
+
+.biodata:hover .biostar-1 {
+    top: 5%; 
+    left: -2%; 
+    width: 25px;
+    height: auto;
+    filter: drop-shadow(0 0 10px #fffdef);
+    z-index: 2;
+}
+
+.biodata:hover .biostar-2 {
+    top: -25%; 
+    left: 30%; 
+    width: 15px;
+    height: auto;
+    filter: drop-shadow(0 0 10px #fffdef);
+    z-index: 2;
+}
+
+.biodata:hover .biostar-3 {
+    top: 70%; 
+    left: 30%; 
+    width: 5px;
+    height: auto;
+    filter: drop-shadow(0 0 10px #fffdef);
+    z-index: 2;
+}
+
+.biodata:hover .biostar-4 {
+    top: 70%; 
+    left: 70%; 
+    width: 8px;
+    height: auto;
+    filter: drop-shadow(0 0 10px #fffdef);
+    z-index: 2;
+}
+
+.biodata:hover .biostar-5 {
+    top: -10%; 
+    left: 80%; 
+    width: 15px;
+    height: auto;
+    filter: drop-shadow(0 0 10px #fffdef);
+    z-index: 2;
+}
+
+.biodata:hover .biostar-6 {
+    top: 5%; 
+    left: 50%; 
+    width: 5px;
+    height: auto;
+    filter: drop-shadow(0 0 10px #fffdef);
+    z-index: 2;
+}
+
+.biofil0 {
+    fill: #fffdef;
+}
+
+
+/*Experience Gallery*/
+.experiencegallery {
+    position: relative;
+    padding: 12px 25px;
+    font-size: 17px;
+    font-weight: 500;
+    color: white;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.experiencegallery .experstar-1,
+.experiencegallery .experstar-2,
+.experiencegallery .experstar-3,
+.experiencegallery .experstar-4,
+.experiencegallery .experstar-5,
+.experiencegallery .experstar-6 {
+    position: absolute;
+    top: 20%;
+    left: 20%;
+    width: auto;
+    height: auto;
+    filter: drop-shadow(0 0 0 rgb(30, 39, 51)); 
+    z-index: -5;
+    transition: all 1s cubic-bezier(0.05, 0.83, 0.43, 0.96);
+}
+
+.experiencegallery:hover {
+    color: #fec195; 
+}
+
+.experiencegallery:hover .experstar-1,
+.experiencegallery:hover .experstar-2,
+.experiencegallery:hover .experstar-3,
+.experiencegallery:hover .experstar-4,
+.experiencegallery:hover .experstar-5,
+.experiencegallery:hover .experstar-6 {
+    filter: drop-shadow(0 0 0 #fff); 
+    z-index: 2;
+}
+
+.experiencegallery:hover .experstar-1 {
+    top: 5%; 
+    left: -2%; 
+    width: 25px;
+    height: auto;
+    filter: drop-shadow(0 0 10px #fffdef);
+    z-index: 2;
+}
+
+.experiencegallery:hover .experstar-2 {
+    top: -25%; 
+    left: 30%; 
+    width: 15px;
+    height: auto;
+    filter: drop-shadow(0 0 10px #fffdef);
+    z-index: 2;
+}
+
+.experiencegallery:hover .experstar-3 {
+    top: 70%; 
+    left: 30%; 
+    width: 5px;
+    height: auto;
+    filter: drop-shadow(0 0 10px #fffdef);
+    z-index: 2;
+}
+
+.experiencegallery:hover .experstar-4 {
+    top: 70%; 
+    left: 70%; 
+    width: 8px;
+    height: auto;
+    filter: drop-shadow(0 0 10px #fffdef);
+    z-index: 2;
+}
+
+.experiencegallery:hover .experstar-5 {
+    top: -10%; 
+    left: 80%; 
+    width: 15px;
+    height: auto;
+    filter: drop-shadow(0 0 10px #fffdef);
+    z-index: 2;
+}
+
+.experiencegallery:hover .experstar-6 {
+    top: 5%; 
+    left: 50%; 
+    width: 5px;
+    height: auto;
+    filter: drop-shadow(0 0 10px #fffdef);
+    z-index: 2;
+}
+
+.experfil0 {
+    fill: #fffdef;
+}
+
+
+/*My Skill*/
+.myskill {
+    position: relative;
+    padding: 12px 35px;
+    font-size: 17px;
+    font-weight: 500;
+    color: white;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.myskill .skillstar-1,
+.myskill .skillstar-2,
+.myskill .skillstar-3,
+.myskill .skillstar-4,
+.myskill .skillstar-5,
+.myskill .skillstar-6 {
+    position: absolute;
+    top: 20%;
+    left: 20%;
+    width: auto;
+    height: auto;
+    filter: drop-shadow(0 0 0 rgb(30, 39, 51)); 
+    z-index: -5;
+    transition: all 1s cubic-bezier(0.05, 0.83, 0.43, 0.96);
+}
+
+.myskill:hover {
+    color: #fec195; 
+}
+
+.myskill:hover .skillstar-1,
+.myskill:hover .skillstar-2,
+.myskill:hover .skillstar-3,
+.myskill:hover .skillstar-4,
+.myskill:hover .skillstar-5,
+.myskill:hover .skillstar-6 {
+    filter: drop-shadow(0 0 0 #fff); 
+    z-index: 2;
+}
+
+.myskill:hover .skillstar-1 {
+    top: 5%; 
+    left: -2%; 
+    width: 25px;
+    height: auto;
+    filter: drop-shadow(0 0 10px #fffdef);
+    z-index: 2;
+}
+
+.myskill:hover .skillstar-2 {
+    top: -25%; 
+    left: 30%; 
+    width: 15px;
+    height: auto;
+    filter: drop-shadow(0 0 10px #fffdef);
+    z-index: 2;
+}
+
+.myskill:hover .skillstar-3 {
+    top: 70%; 
+    left: 30%; 
+    width: 5px;
+    height: auto;
+    filter: drop-shadow(0 0 10px #fffdef);
+    z-index: 2;
+}
+
+.myskill:hover .skillstar-4 {
+    top: 70%; 
+    left: 70%; 
+    width: 8px;
+    height: auto;
+    filter: drop-shadow(0 0 10px #fffdef);
+    z-index: 2;
+}
+
+.myskill:hover .skillstar-5 {
+    top: -10%; 
+    left: 80%; 
+    width: 15px;
+    height: auto;
+    filter: drop-shadow(0 0 10px #fffdef);
+    z-index: 2;
+}
+
+.myskill:hover .skillstar-6 {
+    top: 5%; 
+    left: 50%; 
+    width: 5px;
+    height: auto;
+    filter: drop-shadow(0 0 10px #fffdef);
+    z-index: 2;
+}
+
+.skillfil0 {
+    fill: #fffdef;
+}
+
+/*Education*/
+.education {
+    position: relative;
+    padding: 12px 20px; 
+    font-size: 17px;
+    font-weight: 500;
+    color: white;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+    text-decoration: none; 
+    margin-right: 20px; 
+
+}
+  .education .edustar-1,
+  .education .edustar-2,
+  .education .edustar-3,
+  .education .edustar-4,
+  .education .edustar-5,
+  .education .edustar-6 {
+    position: absolute;
+    top: 20%;
+    left: 20%;
+    width: auto;
+    height: auto;
+    filter: drop-shadow(0 0 0 rgb(30, 39, 51)); 
+    z-index: -5;
+    transition: all 1s cubic-bezier(0.05, 0.83, 0.43, 0.96);
+  }
+  
+  .education:hover {
+    color: #fec195; 
+  }
+  
+  .education:hover .edustar-1,
+  .education:hover .edustar-2,
+  .education:hover .edustar-3,
+  .education:hover .edustar-4,
+  .education:hover .edustar-5,
+  .education:hover .edustar-6 {
+    filter: drop-shadow(0 0 0 #fff); 
+    z-index: 2;
+  }
+  
+  .education:hover .edustar-1 {
+    top: 5%; 
+    left: -2%; 
+    width: 25px;
+    height: auto;
+    filter: drop-shadow(0 0 10px #fffdef);
+    z-index: 2;
+  }
+  
+  .education:hover .edustar-2 {
+    top: -25%; 
+    left: 30%; 
+    width: 15px;
+    height: auto;
+    filter: drop-shadow(0 0 10px #fffdef);
+    z-index: 2;
+  }
+  
+  .education:hover .edustar-3 {
+    top: 70%; 
+    left: 30%; 
+    width: 5px;
+    height: auto;
+    filter: drop-shadow(0 0 10px #fffdef);
+    z-index: 2;
+  }
+  
+  .education:hover .edustar-4 {
+    top: 70%; 
+    left: 70%; 
+    width: 8px;
+    height: auto;
+    filter: drop-shadow(0 0 10px #fffdef);
+    z-index: 2;
+  }
+  
+  .education:hover .edustar-5 {
+    top: -10%; 
+    left: 80%; 
+    width: 15px;
+    height: auto;
+    filter: drop-shadow(0 0 10px #fffdef);
+    z-index: 2;
+  }
+  
+  .education:hover .edustar-6 {
+    top: 5%; 
+    left: 50%; 
+    width: 5px;
+    height: auto;
+    filter: drop-shadow(0 0 10px #fffdef);
+    z-index: 2;
+  }
+  
+  .edufil0 {
+    fill: #fffdef;
+  }
+  
+
+  .hubungisaya {
+    position: relative;
+    display: inline-block;
+    padding: 12px 24px;
+    border: none;
+    font-size: 16px;
+    background-color: inherit;
+    border-radius: 100px;
+    font-weight: 600;
+    color: white; /* Warna teks awal */
+    box-shadow: 0 0 0 2px #ffffff20;
+    cursor: pointer;
+    overflow: hidden;
+    transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
+  }
+  
+  .hubungisaya span:last-child {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 20px;
+    height: 20px;
+    background-color: #fec195;
+    border-radius: 50%;
+    opacity: 0;
+    transition: all 0.8s cubic-bezier(0.23, 1, 0.320, 1);
+  }
+  
+  .hubungisaya span:first-child {
+    position: relative;
+    z-index: 1;
+  }
+  
+  .hubungisaya:hover {
+    box-shadow: 0 0 20px 5px rgba(254, 193, 149, 0.6); /* Efek shadow box dengan warna hijau */
+    color: black; /* Warna teks ketika di-hover */
+  }
+  
+  .hubungisaya:active {
+    transform: scale(0.95); /* Efek scaling saat tombol ditekan */
+  }
+  
+  .hubungisaya:hover span:last-child {
+    width: 150px;
+    height: 150px;
+    opacity: 1;
+  }
+  
+  
+  
+
+
+
+
+
+
+
+
+
+  /*Informasi*/
+
+  /*Gmail*/
+  ul {
+    list-style: none;
+  }
+  
+  .example-2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .example-2 .icon-content {
+    margin: 0 10px;
+    position: relative;
+  }
+  .example-2 .icon-content .tooltip {
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #fff;
+    padding: 6px 10px;
+    border-radius: 5px;
+    opacity: 0;
+    visibility: hidden;
+    font-size: 14px;
+    transition: all 0.3s ease;
+  }
+  .example-2 .icon-content:hover .tooltip {
+    opacity: 1;
+    visibility: visible;
+    top: -50px;
+  }
+  .example-2 .icon-content a {
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    color: #4d4d4d;
+    background-color: #fff;
+    transition: all 0.3s ease-in-out;
+  }
+  .example-2 .icon-content a:hover {
+    box-shadow: 3px 2px 45px 0px rgb(0 0 0 / 12%);
+  }
+  .example-2 .icon-content a svg {
+    position: relative;
+    z-index: 1;
+    width: 30px;
+    height: 30px;
+  }
+  .example-2 .icon-content a:hover {
+    color: white;
+  }
+  .example-2 .icon-content a .filled {
+    position: absolute;
+    top: auto;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    background-color: #000;
+    transition: all 0.3s ease-in-out;
+  }
+  .example-2 .icon-content a:hover .filled {
+    height: 100%;
+  }
+  
+  .example-2 .icon-content a[data-social="gmail"] .filled,
+  .example-2 .icon-content a[data-social="gmail"] ~ .tooltip {
+    background-color: #f84242;
+  }
+  
+  .example-2 .icon-content a[data-social="telegram"] .filled,
+  .example-2 .icon-content a[data-social="telegram"] ~ .tooltip {
+    background-color: #52bfea;
+  }
+  .example-2 .icon-content a[data-social="instagram"] .filled,
+  .example-2 .icon-content a[data-social="instagram"] ~ .tooltip {
+    background: linear-gradient(
+      45deg,
+      #405de6,
+      #5b51db,
+      #b33ab4,
+      #c135b4,
+      #e1306c,
+      #fd1f1f
+    );
+  }
+  .example-2 .icon-content a[data-social="youtube"] .filled,
+  .example-2 .icon-content a[data-social="youtube"] ~ .tooltip {
+    background-color: #ff0000;
+  }
+  
+  
+  .ketjudul {
+    color: white;
+    margin-left: 20px;
+    margin-top: 10px;
+    float: left; /* Membuat ketjudul berada di sebelah kiri */
+    clear: left; /* Membersihkan float sebelum elemen selanjutnya */
+    width: 100%; /* Memastikan ketjudul mengambil lebar penuh */
+    max-width: 600px; /* Batasi lebar maksimum teks */
+    word-wrap: break-word; /* Memastikan kata-kata yang panjang tetap dapat dibungkus */
+}
+
+    /* Experience Gallery */
+    .experiencegallery {
+      position: relative;
+      padding: 12px 35px;
+      font-size: 17px;
+      font-weight: 500;
+      color: white;
+      transition: all 0.3s ease-in-out;
+      cursor: pointer;
+    }
+
+    .experiencegallery .experstar-1,
+    .experiencegallery .experstar-2,
+    .experiencegallery .experstar-3,
+    .experiencegallery .experstar-4,
+    .experiencegallery .experstar-5,
+    .experiencegallery .experstar-6 {
+      position: absolute;
+      top: 20%;
+      left: 20%;
+      width: auto;
+      height: auto;
+      filter: drop-shadow(0 0 0 rgb(30, 39, 51));
+      z-index: -5;
+      transition: all 1s cubic-bezier(0.05, 0.83, 0.43, 0.96);
+    }
+
+    .experiencegallery:hover {
+      color: #fec195;
+    }
+
+    .experiencegallery:hover .experstar-1,
+    .experiencegallery:hover .experstar-2,
+    .experiencegallery:hover .experstar-3,
+    .experiencegallery:hover .experstar-4,
+    .experiencegallery:hover .experstar-5,
+    .experiencegallery:hover .experstar-6 {
+      filter: drop-shadow(0 0 0 #fff);
+      z-index: 2;
+    }
+
+    .experiencegallery:hover .experstar-1 {
+      top: 5%;
+      left: -2%;
+      width: 25px;
+      height: auto;
+      filter: drop-shadow(0 0 10px #fffdef);
+      z-index: 2;
+    }
+
+    .experiencegallery:hover .experstar-2 {
+      top: -25%;
+      left: 30%;
+      width: 15px;
+      height: auto;
+      filter: drop-shadow(0 0 10px #fffdef);
+      z-index: 2;
+    }
+
+    .experiencegallery:hover .experstar-3 {
+      top: 70%;
+      left: 30%;
+      width: 5px;
+      height: auto;
+      filter: drop-shadow(0 0 10px #fffdef);
+      z-index: 2;
+    }
+
+    .experiencegallery:hover .experstar-4 {
+      top: 70%;
+      left: 70%;
+      width: 8px;
+      height: auto;
+      filter: drop-shadow(0 0 10px #fffdef);
+      z-index: 2;
+    }
+
+    .experiencegallery:hover .experstar-5 {
+      top: -10%;
+      left: 80%;
+      width: 15px;
+      height: auto;
+      filter: drop-shadow(0 0 10px #fffdef);
+      z-index: 2;
+    }
+
+    .experiencegallery:hover .experstar-6 {
+      top: 5%;
+      left: 50%;
+      width: 5px;
+      height: auto;
+      filter: drop-shadow(0 0 10px #fffdef);
+      z-index: 2;
+    }
+
+    .experfil0 {
+      fill: #fffdef;
+    }
+
+    /* Isi Experience Gallery */
+    .isiexper2 {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+
+    .judulexper1 {
+      margin-top: 20px;
+      color: #fec195;
+      font-size: 24px;
+    }
+
+    .judulexper2 {
+      color: white;
+      font-size: 20px;
+    }
+
+    .container2 {
+      border: 1px solid white;
+      width: calc(50% - 40px);
+      height: 200px;
+      margin-top: 40px;
+      margin-left: 20px;
+      margin-right: 20px;
+      border-radius: 9px;
+      opacity: 0;
+      transform: translateY(100px);
+      transition: all 0.5s ease-in-out;
+    }
+
+    .gambarexper1 {
+      width: 170px;
+      height: 150px;
+      float: left;
+      margin-right: 20px;
+      margin-top: 20px;
+      margin-left: 20px;
+    }
+
+    .judulisianexper {
+      color: white;
+      font-size: 18px;
+      margin-top: 20px;
+    }
+
+    .isianexper {
+      color: white;
+      font-size: 16px;
+      margin-right: 20px;
+      margin-top: 20px;
+    }
+
+    /* My Skill */
+    .myskill {
+      position: relative;
+      padding: 12px 35px;
+      font-size: 17px;
+      font-weight: 500;
+      color: white;
+      transition: all 0.3s ease-in-out;
+      cursor: pointer;
+    }
+
+    .myskill .skillstar-1,
+    .myskill .skillstar-2,
+    .myskill .skillstar-3,
+    .myskill .skillstar-4,
+    .myskill .skillstar-5,
+    .myskill .skillstar-6 {
+      position: absolute;
+      top: 20%;
+      left: 20%;
+      width: auto;
+      height: auto;
+      filter: drop-shadow(0 0 0 rgb(30, 39, 51));
+      z-index: -5;
+      transition: all 1s cubic-bezier(0.05, 0.83, 0.43, 0.96);
+    }
+
+    .myskill:hover {
+      color: #fec195;
+    }
+
+    .myskill:hover .skillstar-1,
+    .myskill:hover .skillstar-2,
+    .myskill:hover .skillstar-3,
+    .myskill:hover .skillstar-4,
+    .myskill:hover .skillstar-5,
+    .myskill:hover .skillstar-6 {
+      filter: drop-shadow(0 0 0 #fff);
+      z-index: 2;
+    }
+
+    .myskill:hover .skillstar-1 {
+      top: 5%;
+      left: -2%;
+      width: 25px;
+      height: auto;
+      filter: drop-shadow(0 0 10px #fffdef);
+      z-index: 2;
+    }
+
+    .myskill:hover .skillstar-2 {
+      top: -25%;
+      left: 30%;
+      width: 15px;
+      height: auto;
+      filter: drop-shadow(0 0 10px #fffdef);
+      z-index: 2;
+    }
+
+    .myskill:hover .skillstar-3 {
+      top: 70%;
+      left: 30%;
+      width: 5px;
+      height: auto;
+      filter: drop-shadow(0 0 10px #fffdef);
+      z-index: 2;
+    }
+
+    .myskill:hover .skillstar-4 {
+      top: 70%;
+      left: 70%;
+      width: 8px;
+      height: auto;
+      filter: drop-shadow(0 0 10px #fffdef);
+      z-index: 2;
+    }
+
+    .myskill:hover .skillstar-5 {
+      top: -10%;
+      left: 80%;
+      width: 15px;
+      height: auto;
+      filter: drop-shadow(0 0 10px #fffdef);
+      z-index: 2;
+    }
+
+    .myskill:hover .skillstar-6 {
+      top: 5%;
+      left: 50%;
+      width: 5px;
+      height: auto;
+      filter: drop-shadow(0 0 10px #fffdef);
+      z-index: 2;
+    }
+
+    .skillfil0 {
+      fill: #fffdef;
+    }
+
+    /* Isian Skill */
+    .isiskill2 {
+      display: flex;
+    }
+
+    .judulskill1 {
+      color: #fec195;
+      font-size: 24px;
+    }
+
+    .judulskill2 {
+      color: white;
+      font-size: 20px;
+    }
+
+    .box1,
+    .box2,
+    .box3,
+    .box4,
+    .box5,
+    .box6,
+    .box7 {
+      background-color: rgb(30, 39, 51);
+      width: 150px;
+      height: 150px;
+      margin-left: 45px;
+      box-shadow: -1px 1px 15px rgb(74, 40, 105);
+    }
+
+    .gambarbox1,
+    .gambarbox2,
+    .gambarbox3,
+    .gambarbox4,
+    .gambarbox5,
+    .gambarbox6,
+    .gambarbox7 {
+      width: 100px;
+      height: 100px;
+      margin-left: 25px;
+      margin-top: 13px;
+    }
+
+    .nametag1 {
+      color: white;
+      margin-left: 50px;
+      margin-top: 3px;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .nametag2,
+    .nametag5 {
+      color: white;
+      margin-left: 60px;
+      margin-top: 3px;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .nametag3 {
+      color: white;
+      margin-left: 40px;
+      margin-top: 2px;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .nametag4 {
+      color: white;
+      margin-left: 40px;
+      margin-top: 2px;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .nametag6 {
+      color: white;
+      font-size: 14px;
+      margin-left: 27px;
+      margin-top: 2px;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    /* Box Bawah */
+    .isiskill3 {
+      display: flex;
+      justify-content: center;
+      margin-right: 95px;
+    }
+
+    .box7,
+    .box8 {
+      background-color: rgb(30, 39, 51);
+      width: 150px;
+      height: 150px;
+      margin-left: 45px;
+      box-shadow: -1px 1px 15px rgb(74, 40, 105);
+      margin-top: 20px;
+    }
+
+    .gambarbox7,
+    .gambarbox8 {
+      width: 100px;
+      height: 100px;
+      margin-left: 25px;
+      margin-top: 13px;
+    }
+
+    .nametag7 {
+      color: white;
+      margin-left: 35px;
+      margin-top: 2px;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .nametag8 {
+      color: white;
+      margin-left: 53px;
+      margin-top: 2px;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .fade-in {
+      opacity: 1 !important;
+      transform: translateY(0) !important;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+  }
+  
+  body {
+      background-color: rgb(30, 39, 51);
+      overflow-x: hidden;
+  }
+  
+  /* Hidden elements are initially invisible */
+  .hidden {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  }
+  
+  /* When elements appear, they become visible */
+  .hidden.show {
+      opacity: 1;
+      transform: translateY(0);
+  }
+  
+  /* other CSS rules */
+  
