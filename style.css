@@ -1,45 +1,82 @@
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-    background-color: rgb(30, 39, 51);
-    overflow-x: hidden;
+  background-color: rgb(30, 39, 51);
+  overflow-x: hidden;
 }
 
 .rifqiporto {
-    color: #fec195;
-    font-size: 25px;
-    margin-left: 30px;
-    margin-top: 20px;
+  color: #fec195;
+  font-size: 25px;
+  margin-left: 30px;
+  margin-top: 20px;
 }
 
 .menu {
-    text-align: right;
-    list-style: none;
-    padding: 0;
+  list-style: none;
+  padding: 0;
+  margin: 20px; /* Menambahkan margin untuk menghilangkan jarak di luar menu */
+  display: flex; /* Mengubah display menjadi flex untuk menyusun item dalam satu baris */
+  justify-content: flex-start; /* Menyusun item ke kiri */
 }
 
-.aboutme, .biodata, .experiencegallery, .myskill, .education {
-    color: white;
-    display: inline-block;
-    margin-right: -40px;
-    font-size: 18px;
-    text-decoration: none;
+.aboutme, 
+.biodata, 
+.experiencegallery, 
+.myskills, 
+.education {
+  color: white;
+  margin-right: 10px; /* Mengurangi jarak antar item menu */
+  font-size: 18px;
+  text-decoration: none; /* Menghilangkan garis bawah */
 }
+
+/* Menambahkan hover effect untuk interaksi yang lebih baik */
+.aboutme:hover, 
+.biodata:hover, 
+.experiencegallery:hover, 
+.myskills:hover, 
+.education:hover {
+  text-decoration: underline; /* Menambahkan garis bawah saat hover */
+}
+
+@media (max-width: 768px) {
+  .menu {
+    justify-content: space-between; /* Menjaga jarak antar item di perangkat mobile */
+    margin: 10px; /* Mengurangi margin di luar menu */
+  }
+
+  .aboutme, 
+  .biodata, 
+  .experiencegallery, 
+  .myskills {
+    margin-right: 10px; /* Menjaga jarak antar item menu */
+    margin-bottom: 0; /* Menghapus margin bawah di perangkat mobile */
+    font-size: 16px; /* Mengatur ukuran font lebih kecil jika diperlukan */
+  }
+  .education {
+    margin-right: 0; /* Menghapus margin kanan untuk Education */
+    margin-top: 0; /* Menghapus jarak atas untuk Education */
+    width: 100%; /* Memastikan Education mengambil lebar penuh */
+    text-align: left; /* Mengatur teks ke kiri */
+  }
+}
+
 
 
 /*About Me*/
 .aboutme {
-    position: relative;
-    padding: 12px 35px;
-    font-size: 17px;
-    font-weight: 500;
-    color: white;
-    transition: all 0.3s ease-in-out;
-    cursor: pointer;
+  position: relative;
+  padding: 12px 35px;
+  font-size: 17px;
+  font-weight: 500;
+  color: white;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
 }
 
 .aboutme .star-1,
@@ -48,18 +85,18 @@ body {
 .aboutme .star-4,
 .aboutme .star-5,
 .aboutme .star-6 {
-    position: absolute;
-    top: 20%;
-    left: 20%;
-    width: auto;
-    height: auto;
-    filter: drop-shadow(0 0 0 rgb(30, 39, 51));
-    z-index: -5;
-    transition: all 1s cubic-bezier(0.05, 0.83, 0.43, 0.96);
+  position: absolute;
+  top: 20%;
+  left: 20%;
+  width: auto;
+  height: auto;
+  filter: drop-shadow(0 0 0 rgb(30, 39, 51));
+  z-index: -5;
+  transition: all 1s cubic-bezier(0.05, 0.83, 0.43, 0.96);
 }
 
 .aboutme:hover {
-    color: #fec195;
+  color: #fec195;
 }
 
 .aboutme:hover .star-1,
@@ -68,114 +105,176 @@ body {
 .aboutme:hover .star-4,
 .aboutme:hover .star-5,
 .aboutme:hover .star-6 {
-    filter: drop-shadow(0 0 0 #fff);
-    z-index: 2;
+  filter: drop-shadow(0 0 0 #fff);
+  z-index: 2;
 }
 
 .aboutme:hover .star-1 {
-    top: 5%;
-    left: -2%;
-    width: 25px;
-    height: auto;
-    filter: drop-shadow(0 0 10px #fffdef);
-    z-index: 2;
+  top: 5%;
+  left: -2%;
+  width: 25px;
+  height: auto;
+  filter: drop-shadow(0 0 10px #fffdef);
+  z-index: 2;
 }
 
 .aboutme:hover .star-2 {
-    top: -25%;
-    left: 30%;
-    width: 15px;
-    height: auto;
-    filter: drop-shadow(0 0 10px #fffdef);
-    z-index: 2;
+  top: -25%;
+  left: 30%;
+  width: 15px;
+  height: auto;
+  filter: drop-shadow(0 0 10px #fffdef);
+  z-index: 2;
 }
 
 .aboutme:hover .star-3 {
-    top: 70%;
-    left: 30%;
-    width: 5px;
-    height: auto;
-    filter: drop-shadow(0 0 10px #fffdef);
-    z-index: 2;
+  top: 70%;
+  left: 30%;
+  width: 5px;
+  height: auto;
+  filter: drop-shadow(0 0 10px #fffdef);
+  z-index: 2;
 }
 
 .aboutme:hover .star-4 {
-    top: 70%;
-    left: 70%;
-    width: 8px;
-    height: auto;
-    filter: drop-shadow(0 0 10px #fffdef);
-    z-index: 2;
+  top: 70%;
+  left: 70%;
+  width: 8px;
+  height: auto;
+  filter: drop-shadow(0 0 10px #fffdef);
+  z-index: 2;
 }
 
 .aboutme:hover .star-5 {
-    top: -10%;
-    left: 80%;
-    width: 15px;
-    height: auto;
-    filter: drop-shadow(0 0 10px #fffdef);
-    z-index: 2;
+  top: -10%;
+  left: 80%;
+  width: 15px;
+  height: auto;
+  filter: drop-shadow(0 0 10px #fffdef);
+  z-index: 2;
 }
 
 .aboutme:hover .star-6 {
-    top: 5%;
-    left: 50%;
-    width: 5px;
-    height: auto;
-    filter: drop-shadow(0 0 10px #fffdef);
-    z-index: 2;
+  top: 5%;
+  left: 50%;
+  width: 5px;
+  height: auto;
+  filter: drop-shadow(0 0 10px #fffdef);
+  z-index: 2;
 }
 
 .fil0 {
-    fill: #fffdef;
+  fill: #fffdef;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .rifqiporto {
+      font-size: 22px; /* Ukuran font untuk nama */
+      margin-left: 20px; /* Margin kiri */
+  }
+
+  .menu {
+      display: flex; /* Menjaga menu tetap dalam satu baris */
+      flex-wrap: nowrap; /* Menonaktifkan pembungkusan elemen */
+      justify-content: flex-start; /* Menyusun elemen dari kiri ke kanan */
+      align-items: center; /* Menyelaraskan elemen di bagian tengah */
+      margin-right: -3px; /* Menghapus margin negatif */
+      padding: 10px; /* Menambahkan padding untuk elemen menu */
+      overflow-x: hidden; /* Menambahkan scroll horizontal jika diperlukan */
+  }
+
+  .aboutme, 
+  .biodata, 
+  .experiencegallery, 
+  .myskill, 
+  .education {
+      font-size: 16px; /* Ukuran font untuk elemen */
+      flex: 1 1 calc(33.33% - 20px); /* Membuat elemen fleksibel dengan lebar maksimum 33.33% */
+      margin: 0px; /* Menambahkan margin untuk elemen */
+      box-sizing: border-box; /* Menjaga padding dan margin di dalam lebar elemen */
+  }
+
+  }
+
+  
+
+  @media (max-width: 768px) {
+      .rifqiporto {
+          font-size: 20px; /* Ukuran font lebih kecil untuk layar */
+          margin-left: 15px; /* Margin kiri */
+      }
+
+      .aboutme, .biodata, .experiencegallery, .myskill, .education {
+          font-size: 14px; /* Ukuran font lebih kecil */
+          margin-right: -15px; /* Mengatur margin */
+      }
+
+      .menu {
+          text-align: center; /* Menyelaraskan teks menu di tengah */
+      }
+  }
+
+
+
+@media (max-width: 768px) {
+  .aboutme {
+    padding: 10px 20px;
+    font-size: 15px;
+  }
+
+  .aboutme .star-1,
+  .aboutme .star-2,
+  .aboutme .star-3,
+  .aboutme .star-4,
+  .aboutme .star-5,
+  .aboutme .star-6 {
+    transition: all 0.8s cubic-bezier(0.05, 0.83, 0.43, 0.96); /* Mempercepat transisi di mobile */
+  }
+
+  .aboutme:hover .star-1 {
+    top: 5%;
+    left: -16%;
+  }
+
+  .aboutme:hover .star-2 {
+    top: -20%;
+    left: 35%;
+  }
+
+  .aboutme:hover .star-3 {
+    top: 80%;
+    left: 75%;
+  }
+
+  .aboutme:hover .star-4 {
+    top: 50%;
+    left: 75%;
+  }
+
+  .aboutme:hover .star-5 {
+    top: -5%;
+    left: 75%;
+  }
+
+  .aboutme:hover .star-6 {
+    top: 75%;
+    left: 30%;
+  }
 }
 
 /*Perkenalan*/
 .Nama {
-    overflow: hidden; /* Clear float */
-}
-
-.judul {
-    color: white;
-    font-size: 24px;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    float: left; /* Membuat judul berada di sebelah kiri */
-    clear: left; /* Membersihkan float sebelum elemen selanjutnya */
-    width: 100%; /* Memastikan judul mengambil lebar penuh */
-    margin-left: 30px;
-    margin-top: 40px;
-}
-
-.judul2 {
-    color: #fec195;
-    font-size: 20px;
-    float: left; /* Membuat judul2 berada di sebelah kiri */
-    clear: left; /* Membersihkan float sebelum elemen selanjutnya */
-    width: 100%; /* Memastikan judul2 mengambil lebar penuh */
-    margin-left: 30px;
-    margin-top: 4px;
-}
-
-.ketjudul {
-    color: white;
-    margin-left: 30px;
-    margin-top: 10px;
-    float: left; /* Membuat ketjudul berada di sebelah kiri */
-    clear: left; /* Membersihkan float sebelum elemen selanjutnya */
-    width: 100%; /* Memastikan ketjudul mengambil lebar penuh */
-    max-width: 600px; /* Batasi lebar maksimum teks */
-    word-wrap: break-word; /* Memastikan kata-kata yang panjang tetap dapat dibungkus */
+  display: flex; /* Menggunakan flexbox untuk membuat gambar dan teks sejajar */
+  align-items: center; /* Menyelaraskan elemen secara vertikal */
+  justify-content: space-between; /* Memberikan jarak antara gambar dan teks */
+  margin-top: 30px;
 }
 
 .gambar1 {
-    float: right;
-    width: 320px;
-    height: 300px;
-    margin-top: -70px;
-    margin-right: 100px;
-}
-
-.gambar1 {
+  width: 320px;
+  height: 300px;
+  margin-right: 100px;
   position: relative;
   animation: slideInFromRight 1s forwards;
   opacity: 0;
@@ -191,6 +290,79 @@ body {
       opacity: 1;
   }
 }
+
+.teks-container {
+  max-width: 600px; /* Membatasi lebar teks */
+  margin-left: 30px; /* Menambahkan margin kiri untuk jarak dari sisi kiri */
+}
+
+.judul {
+  color: white;
+  font-size: 24px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  margin-bottom: 10px;
+}
+
+.judul2 {
+  color: #fec195;
+  font-size: 20px;
+  margin-bottom: 4px;
+}
+
+.ketjudul {
+  color: white;
+  word-wrap: break-word; /* Membungkus kata panjang */
+}
+
+/* Media Queries untuk Responsif */
+@media (max-width: 768px) {
+  .Nama {
+      flex-direction: column; /* Menyusun gambar dan teks secara vertikal */
+      align-items: center; /* Menyelaraskan elemen di tengah */
+      text-align: center; /* Menyelaraskan teks ke tengah */
+  }
+
+  .gambar1 {
+      width: 80%; /* Mengatur lebar gambar menjadi 80% dari lebar kontainer */
+      max-width: 400px; /* Membatasi lebar maksimum gambar */
+      height: auto; /* Mengatur tinggi otomatis untuk menjaga aspek rasio */
+      margin-right: 0; /* Menghapus margin kanan */
+      margin-bottom: 20px; /* Jarak antara gambar dan teks */
+  }
+
+  .teks-container {
+      margin-left: 0; /* Menghapus margin kiri pada teks */
+      max-width: 100%; /* Membiarkan teks mengisi lebar penuh */
+      padding: 0 15px; /* Menambahkan padding horizontal untuk memberi jarak dari tepi */
+  }
+
+  .judul {
+      font-size: 20px; /* Mengurangi ukuran font untuk judul */
+  }
+
+  .judul2 {
+      font-size: 18px; /* Mengurangi ukuran font untuk judul kedua */
+  }
+
+  .ketjudul {
+      font-size: 16px; /* Mengurangi ukuran font untuk keterangan */
+  }
+}
+
+@media (max-width: 576px) {
+  .judul {
+      font-size: 18px; /* Mengurangi ukuran font lebih kecil */
+  }
+
+  .judul2 {
+      font-size: 16px; /* Mengurangi ukuran font lebih kecil */
+  }
+
+  .ketjudul {
+      font-size: 14px; /* Mengurangi ukuran font lebih kecil */
+  }
+}
+
 
 /*Tombol Hubungi Saya*/
 .hubungisaya1 {
@@ -281,116 +453,176 @@ body {
     opacity: 1;
   }
 
-  /*Informasi*/
-  ul {
-    list-style: none;
+/* Penyesuaian untuk tampilan mobile */
+@media (max-width: 768px) {
+  .hubungisaya {
+    display: block;
+    margin: 0 auto; /* Memastikan tombol berada di tengah */
+    text-align: center;
   }
-  
+
+  .hubungisaya1 {
+    display: block;
+    text-align: center;
+    margin: 0 auto; /* Memastikan teks berada di tengah */
+  }
+}
+
+ul {
+  list-style: none;
+}
+
+.example-2 {
+  display: flex;
+  justify-content: left; /* Default alignment untuk desktop */
+  align-items: left; /* Default alignment untuk desktop */
+  flex-wrap: wrap; /* Membungkus elemen saat ruang terbatas */
+}
+
+.example-2 .icon-content {
+  margin: 0 10px;
+  position: relative;
+}
+
+.example-2 .icon-content .tooltip {
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #fff;
+  padding: 6px 10px;
+  margin-left: 30px;
+  border-radius: 5px;
+  opacity: 0;
+  visibility: hidden;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+.example-2 .icon-content:hover .tooltip {
+  opacity: 1;
+  visibility: visible;
+  top: 30px;
+}
+
+.example-2 .icon-content a {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  margin-top: 80px; /* Jarak atas ikon */
+  left: 30px; /* Offset ke kiri */
+  border-radius: 50%;
+  color: #4d4d4d;
+  background-color: #fff;
+  transition: all 0.3s ease-in-out;
+}
+
+.example-2 .icon-content a:hover {
+  box-shadow: 3px 2px 45px 0px rgb(0 0 0 / 12%);
+}
+
+.example-2 .icon-content a svg {
+  position: relative;
+  z-index: 1;
+  width: 20px;
+  height: 20px;
+}
+
+.example-2 .icon-content a:hover {
+  color: white;
+}
+
+.example-2 .icon-content a .filled {
+  position: absolute;
+  top: auto;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0;
+  background-color: #000;
+  transition: all 0.3s ease-in-out;
+}
+
+.example-2 .icon-content a:hover .filled {
+  height: 100%;
+}
+
+.example-2 .icon-content a[data-social="gmail"] .filled,
+.example-2 .icon-content a[data-social="gmail"] ~ .tooltip {
+  background-color: #f84242;
+}
+
+.example-2 .icon-content a[data-social="telegram"] .filled,
+.example-2 .icon-content a[data-social="telegram"] ~ .tooltip {
+  background-color: #52bfea;
+}
+
+.example-2 .icon-content a[data-social="instagram"] .filled,
+.example-2 .icon-content a[data-social="instagram"] ~ .tooltip {
+  background: linear-gradient(
+    45deg,
+    #405de6,
+    #5b51db,
+    #b33ab4,
+    #c135b4,
+    #e1306c,
+    #fd1f1f
+  );
+}
+
+.example-2 .icon-content a[data-social="linkedin"] .filled,
+.example-2 .icon-content a[data-social="linkedin"] ~ .tooltip {
+  background-color: #1676c4;
+}
+
+/* Media Queries untuk Responsif */
+@media (max-width: 576px) {
   .example-2 {
-    display: flex;
-    justify-content: left;
-    align-items: left;
+    display: flex; /* Pastikan display adalah flex */
+    flex-direction: column; /* Susun elemen secara vertikal */
+    align-items: center; /* Pusatkan elemen secara horizontal */
+    justify-content: center; /* Pusatkan elemen secara vertikal */
+    text-align: center; /* Pusatkan teks di dalam elemen */
+    height: 100vh; /* Membuat kontainer memiliki tinggi penuh untuk memusatkan secara vertikal */
   }
+
   .example-2 .icon-content {
-    margin: 0 10px;
-    position: relative;
+    margin: 10px 0; /* Jarak antara ikon */
+    display: flex; /* Pastikan display adalah flex untuk ikon */
+    justify-content: center; /* Pusatkan ikon secara horizontal */
   }
-  .example-2 .icon-content .tooltip {
-    position: absolute;
-    top: 10px;
-    left: 50%;
-    transform: translateX(-50%);
-    color: #fff;
-    padding: 6px 10px;
-    margin-left: 30px;
-    border-radius: 5px;
-    opacity: 0;
-    visibility: hidden;
-    font-size: 14px;
-    transition: all 0.3s ease;
-  }
-  .example-2 .icon-content:hover .tooltip {
-    opacity: 1;
-    visibility: visible;
-    top: 30px;
-  }
+
   .example-2 .icon-content a {
-    position: relative;
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 40px;
-    height: 40px;
-    margin-top: 80px;
-    left: 30px;
-    border-radius: 50%;
-    color: #4d4d4d;
-    background-color: #fff;
-    transition: all 0.3s ease-in-out;
+    width: 50px; /* Lebar ikon */
+    height: 50px; /* Tinggi ikon */
+    margin-top: 20px; /* Jarak atas ikon */
+    display: flex; /* Menggunakan flex untuk memusatkan ikon */
+    align-items: center; /* Pusatkan ikon secara vertikal dalam link */
+    justify-content: center; /* Pusatkan ikon secara horizontal dalam link */
   }
-  .example-2 .icon-content a:hover {
-    box-shadow: 3px 2px 45px 0px rgb(0 0 0 / 12%);
+
+  .example-2 .icon-content .tooltip {
+    display: none; /* Sembunyikan tooltip di mobile */
   }
-  .example-2 .icon-content a svg {
-    position: relative;
-    z-index: 1;
-    width: 20px;
-    height: 20px;
-  }
-  .example-2 .icon-content a:hover {
-    color: white;
-  }
-  .example-2 .icon-content a .filled {
-    position: absolute;
-    top: auto;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 0;
-    background-color: #000;
-    transition: all 0.3s ease-in-out;
-  }
-  .example-2 .icon-content a:hover .filled {
-    height: 100%;
-  }
-  
-  .example-2 .icon-content a[data-social="gmail"] .filled,
-  .example-2 .icon-content a[data-social="gmail"] ~ .tooltip {
-    background-color: #f84242;
-  }
-  
-  .example-2 .icon-content a[data-social="telegram"] .filled,
-  .example-2 .icon-content a[data-social="telegram"] ~ .tooltip {
-    background-color: #52bfea;
-  }
-  .example-2 .icon-content a[data-social="instagram"] .filled,
-  .example-2 .icon-content a[data-social="instagram"] ~ .tooltip {
-    background: linear-gradient(
-      45deg,
-      #405de6,
-      #5b51db,
-      #b33ab4,
-      #c135b4,
-      #e1306c,
-      #fd1f1f
-    );
-  }
-  .example-2 .icon-content a[data-social="linkedin"] .filled,
-  .example-2 .icon-content a[data-social="linkedin"] ~ .tooltip {
-    background-color: #1676c4;
-  }
-  
+}
+
+
+
+
 
 /* Biodata */
 .biodata {
-    position: relative;
-    padding: 12px 35px;
-    font-size: 17px;
-    font-weight: 500;
-    color: white;
-    transition: all 0.3s ease-in-out;
-    cursor: pointer;
+  position: relative;
+  padding: 12px 35px;
+  font-size: 17px;
+  font-weight: 500;
+  color: white;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
 }
 
 .biodata .biostar-1,
@@ -399,18 +631,18 @@ body {
 .biodata .biostar-4,
 .biodata .biostar-5,
 .biodata .biostar-6 {
-    position: absolute;
-    top: 20%;
-    left: 20%;
-    width: auto;
-    height: auto;
-    filter: drop-shadow(0 0 0 rgb(30, 39, 51)); 
-    z-index: -5;
-    transition: all 1s cubic-bezier(0.05, 0.83, 0.43, 0.96);
+  position: absolute;
+  top: 20%;
+  left: 20%;
+  width: auto;
+  height: auto;
+  filter: drop-shadow(0 0 0 rgb(30, 39, 51)); 
+  z-index: -5;
+  transition: all 1s cubic-bezier(0.05, 0.83, 0.43, 0.96);
 }
 
 .biodata:hover {
-    color: #fec195; 
+  color: #fec195; 
 }
 
 .biodata:hover .biostar-1,
@@ -419,203 +651,300 @@ body {
 .biodata:hover .biostar-4,
 .biodata:hover .biostar-5,
 .biodata:hover .biostar-6 {
-    filter: drop-shadow(0 0 0 #fff); 
-    z-index: 2;
+  filter: drop-shadow(0 0 0 #fff); 
+  z-index: 2;
 }
 
 .biodata:hover .biostar-1 {
-    top: 5%; 
-    left: -2%; 
-    width: 25px;
-    height: auto;
-    filter: drop-shadow(0 0 10px #fffdef);
-    z-index: 2;
+  top: 5%; 
+  left: -2%; 
+  width: 25px;
+  height: auto;
+  filter: drop-shadow(0 0 10px #fffdef);
+  z-index: 2;
 }
 
 .biodata:hover .biostar-2 {
-    top: -25%; 
-    left: 30%; 
-    width: 15px;
-    height: auto;
-    filter: drop-shadow(0 0 10px #fffdef);
-    z-index: 2;
+  top: -25%; 
+  left: 30%; 
+  width: 15px;
+  height: auto;
+  filter: drop-shadow(0 0 10px #fffdef);
+  z-index: 2;
 }
 
 .biodata:hover .biostar-3 {
-    top: 70%; 
-    left: 30%; 
-    width: 5px;
-    height: auto;
-    filter: drop-shadow(0 0 10px #fffdef);
-    z-index: 2;
+  top: 70%; 
+  left: 30%; 
+  width: 5px;
+  height: auto;
+  filter: drop-shadow(0 0 10px #fffdef);
+  z-index: 2;
 }
 
 .biodata:hover .biostar-4 {
-    top: 70%; 
-    left: 70%; 
-    width: 8px;
-    height: auto;
-    filter: drop-shadow(0 0 10px #fffdef);
-    z-index: 2;
+  top: 70%; 
+  left: 70%; 
+  width: 8px;
+  height: auto;
+  filter: drop-shadow(0 0 10px #fffdef);
+  z-index: 2;
 }
 
 .biodata:hover .biostar-5 {
-    top: -10%; 
-    left: 80%; 
-    width: 15px;
-    height: auto;
-    filter: drop-shadow(0 0 10px #fffdef);
-    z-index: 2;
+  top: -10%; 
+  left: 80%; 
+  width: 15px;
+  height: auto;
+  filter: drop-shadow(0 0 10px #fffdef);
+  z-index: 2;
 }
 
 .biodata:hover .biostar-6 {
-    top: 5%; 
-    left: 50%; 
-    width: 5px;
-    height: auto;
-    filter: drop-shadow(0 0 10px #fffdef);
-    z-index: 2;
+  top: 5%; 
+  left: 50%; 
+  width: 5px;
+  height: auto;
+  filter: drop-shadow(0 0 10px #fffdef);
+  z-index: 2;
 }
 
 .biofil0 {
-    fill: #fffdef;
+  fill: #fffdef;
 }
 
+/* Media Query for Mobile Responsiveness */
+@media (max-width: 768px) {
+  .biodata {
+    padding: 10px 20px;
+    font-size: 15px;
+  }
 
-/*Isi Biodata*/
+  .biodata .biostar-1,
+  .biodata .biostar-2,
+  .biodata .biostar-3,
+  .biodata .biostar-4,
+  .biodata .biostar-5,
+  .biodata .biostar-6 {
+    transition: all 0.8s cubic-bezier(0.05, 0.83, 0.43, 0.96); /* Mempercepat transisi di mobile */
+  }
+
+  .biodata:hover .biostar-1 {
+    top: 5%;
+    left: -16%;
+  }
+
+  .biodata:hover .biostar-2 {
+    top: -20%;
+    left: 35%;
+  }
+
+  .biodata:hover .biostar-3 {
+    top: 80%;
+    left: 75%;
+  }
+
+  .biodata:hover .biostar-4 {
+    top: 50%;
+    left: 75%;
+  }
+
+  .biodata:hover .biostar-5 {
+    top: -5%;
+    left: 75%;
+  }
+
+  .biodata:hover .biostar-6 {
+    top: 75%;
+    left: 30%;
+  }
+}
+
+/* Isi Biodata */
 .judulbio {
-    overflow: hidden;
+  overflow: hidden;
 }
 
 .biodata1 {
-    color: #fec195;
-    font-size: 24px;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    margin-top: 20px;
+  color: #fec195;
+  font-size: 24px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  margin-top: 20px;
 }
 
 .biodata2 {
-    color: white;
-    font-size: 20px;
-    margin-top: 4px;
-    margin-bottom: 50px;
+  color: white;
+  font-size: 20px;
+  margin-top: 4px;
+  margin-bottom: 50px;
 }
 
 .gambar2 {
-  float: left; /* Menggeser gambar ke sebelah kiri */
-  clear: left;
-  width: 300px; /* Atur lebar gambar sesuai kebutuhan */
-  height: 300px;
-  margin-top: -30px;
-  margin-right: 250px;
-  margin-left: 50px;
+float: left; /* Menggeser gambar ke sebelah kiri */
+clear: left;
+width: 300px; /* Atur lebar gambar sesuai kebutuhan */
+height: 300px;
+margin-top: -30px;
+margin-right: 250px;
+margin-left: 50px;
 }
 
 .gambar2 {
-  position: relative;
-  animation: slideInFromLeft 1s forwards;
-  opacity: 0;
+position: relative;
+animation: slideInFromLeft 1s forwards;
+opacity: 0;
 }
 
 @keyframes slideInFromLeft {
-  0% {
-      transform: translateX(-100%);
-      opacity: 0;
-  }
-  100% {
-      transform: translateX(0);
-      opacity: 1;
-  }
+0% {
+    transform: translateX(-100%);
+    opacity: 0;
+}
+100% {
+    transform: translateX(0);
+    opacity: 1;
+}
 }
 
 .mybio {
-  color: white;
-  margin-right: 600px;
-  margin-bottom: 20px;
-  margin-top: -20px;
-  word-wrap: break-word;
+color: white;
+margin-right: 600px;
+margin-bottom: 20px;
+margin-top: -20px;
+word-wrap: break-word;
 }
 
 .ketbio {
-    color: white;
-    margin-top: -10px;
-    margin-bottom: 20px;
-    margin-right: 40px;
-    word-wrap: break-word; 
-
+  color: white;
+  margin-top: -10px;
+  margin-bottom: 20px;
+  margin-right: 40px;
+  word-wrap: break-word; 
 }
 
 .container1 {
-  border: 1px solid white; 
-  float: right;
-  margin-right: 60px;
-  margin-top: -30px;
-  width: 625px;
-  height: 240px;
-  border-radius: 5px;
+border: 1px solid white; 
+float: right;
+margin-right: 60px;
+margin-top: -30px;
+width: 625px;
+height: 240px;
+border-radius: 5px;
 }
 
 .container1:hover {
-  background-color: #0b487a;
-  color: #000; 
-  transform: scale(1.05); 
+background-color: #0b487a;
+color: #000; 
+transform: scale(1.05); 
 }
 
 /* Baris Kiri */
 .bariskiri {
-  list-style: none;
-  float: left; 
-  width: 50%; 
+list-style: none;
+float: left; 
+width: 50%; 
 }
 
 .li1nama, .li1status, .li1nomor {
-  color: white;
-  font-size: 18px;
-  margin-top: 20px;
-  margin-left: 40px;
-  margin-bottom: 10px;
+color: white;
+font-size: 18px;
+margin-top: 20px;
+margin-left: 40px;
+margin-bottom: 10px;
 }
 
 .p1nama, .p1status, .p1nomor {
-  font-size: 16px;
-  color: #fec195;
-  margin-bottom: 20px;
-  margin-left: 40px;
+font-size: 16px;
+color: #fec195;
+margin-bottom: 20px;
+margin-left: 40px;
 }
 
 /* Baris Kanan */
 .bariskanan {
-  list-style: none;
-  float: right; 
-  clear: right;
-  width: 50%; 
+list-style: none;
+float: right; 
+clear: right;
+width: 50%; 
 }
 
 .li2email, .li2jenkel, .li2umur {
-  color: white;
-  font-size: 18px;
-  margin-left: 40px;
-  margin-top: 20px;
-  margin-bottom: 10px;
+color: white;
+font-size: 18px;
+margin-left: 40px;
+margin-top: 20px;
+margin-bottom: 10px;
 }
 
 .p2email,.p2jenkel,.p2umur {
-  font-size: 16px;
-  color: #fec195;
-  margin-bottom: 20px;
-  margin-left: 40px;
+font-size: 16px;
+color: #fec195;
+margin-bottom: 20px;
+margin-left: 40px;
+}
+
+/* Media Queries for Mobile */
+@media only screen and (max-width: 768px) {
+  .biodata {
+      padding: 12px 15px; /* Mengurangi padding */
+      font-size: 16px; /* Mengurangi ukuran font */
+  }
+
+  .biodata1 {
+      font-size: 20px; /* Ukuran font lebih kecil */
+  }
+
+  .biodata2 {
+      font-size: 18px; /* Ukuran font lebih kecil */
+  }
+
+  .gambar2 {
+    width: 80%; /* Mengatur lebar gambar menjadi 80% dari kontainer */
+    max-width: 400px; /* Membatasi lebar maksimum gambar */
+    height: auto; /* Tinggi gambar otomatis untuk menjaga aspek rasio */
+    margin: 0 auto; /* Memusatkan gambar dengan margin otomatis */
+    margin-bottom: 20px; /* Jarak antara gambar dan teks */
+  }
+
+  .mybio, .ketbio {
+      margin-right: 0; /* Hapus margin kanan */
+      margin-left: 0; /* Hapus margin kiri */
+      width: auto; /* Otomatis lebar */
+
+    }
+
+    .container1 {
+      width: 82%; /* Lebar menyesuaikan dengan layar mobile */
+      height: auto; /* Sesuaikan tinggi secara otomatis */
+      flex-direction: row; /* Biarkan kolom tetap sejajar */
+      margin-top: 2px;
+  }
+  
+  .bariskiri, .bariskanan {
+      width: 45%; /* Pertahankan teks di kanan dan kiri */
+      margin: 0;
+  }
+  
+  .li1nama, .li1status, .li1nomor, .li2email, .li2jenkel, .li2umur {
+      font-size: 15px; /* Ukuran font lebih kecil pada mobile */
+  }
+  
+  .p1nama, .p1status, .p1nomor, .p2email, .p2jenkel, .p2umur {
+      font-size: 15px; /* Ukuran font lebih kecil pada mobile */
+  }
 }
 
 
-/*Experience Gallery*/
-/* .experiencegallery {
-    position: relative;
-    padding: 12px 35px;
-    font-size: 17px;
-    font-weight: 500;
-    color: white;
-    transition: all 0.3s ease-in-out;
-    cursor: pointer;
+
+/* Experience Gallery */
+ .experiencegallery {
+  position: relative;
+  padding: 12px 35px;
+  font-size: 17px;
+  font-weight: 500;
+  color: white;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
 }
 
 .experiencegallery .experstar-1,
@@ -624,18 +953,18 @@ body {
 .experiencegallery .experstar-4,
 .experiencegallery .experstar-5,
 .experiencegallery .experstar-6 {
-    position: absolute;
-    top: 20%;
-    left: 20%;
-    width: auto;
-    height: auto;
-    filter: drop-shadow(0 0 0 rgb(30, 39, 51)); 
-    z-index: -5;
-    transition: all 1s cubic-bezier(0.05, 0.83, 0.43, 0.96);
+  position: absolute;
+  top: 20%;
+  left: 20%;
+  width: auto;
+  height: auto;
+  filter: drop-shadow(0 0 0 rgb(30, 39, 51)); 
+  z-index: -5;
+  transition: all 1s cubic-bezier(0.05, 0.83, 0.43, 0.96);
 }
 
 .experiencegallery:hover {
-    color: #fec195; 
+  color: #fec195; 
 }
 
 .experiencegallery:hover .experstar-1,
@@ -644,71 +973,70 @@ body {
 .experiencegallery:hover .experstar-4,
 .experiencegallery:hover .experstar-5,
 .experiencegallery:hover .experstar-6 {
-    filter: drop-shadow(0 0 0 #fff); 
-    z-index: 2;
+  filter: drop-shadow(0 0 0 #fff); 
+  z-index: 2;
 }
 
 .experiencegallery:hover .experstar-1 {
-    top: 5%; 
-    left: -2%; 
-    width: 25px;
-    height: auto;
-    filter: drop-shadow(0 0 10px #fffdef);
-    z-index: 2;
+  top: 5%; 
+  left: -2%; 
+  width: 25px;
+  height: auto;
+  filter: drop-shadow(0 0 10px #fffdef);
+  z-index: 2;
 }
 
 .experiencegallery:hover .experstar-2 {
-    top: -25%; 
-    left: 30%; 
-    width: 15px;
-    height: auto;
-    filter: drop-shadow(0 0 10px #fffdef);
-    z-index: 2;
+  top: -25%; 
+  left: 30%; 
+  width: 15px;
+  height: auto;
+  filter: drop-shadow(0 0 10px #fffdef);
+  z-index: 2;
 }
 
 .experiencegallery:hover .experstar-3 {
-    top: 70%; 
-    left: 30%; 
-    width: 5px;
-    height: auto;
-    filter: drop-shadow(0 0 10px #fffdef);
-    z-index: 2;
+  top: 70%; 
+  left: 30%; 
+  width: 5px;
+  height: auto;
+  filter: drop-shadow(0 0 10px #fffdef);
+  z-index: 2;
 }
 
 .experiencegallery:hover .experstar-4 {
-    top: 70%; 
-    left: 70%; 
-    width: 8px;
-    height: auto;
-    filter: drop-shadow(0 0 10px #fffdef);
-    z-index: 2;
+  top: 70%; 
+  left: 70%; 
+  width: 8px;
+  height: auto;
+  filter: drop-shadow(0 0 10px #fffdef);
+  z-index: 2;
 }
 
 .experiencegallery:hover .experstar-5 {
-    top: -10%; 
-    left: 80%; 
-    width: 15px;
-    height: auto;
-    filter: drop-shadow(0 0 10px #fffdef);
-    z-index: 2;
+  top: -10%; 
+  left: 80%; 
+  width: 15px;
+  height: auto;
+  filter: drop-shadow(0 0 10px #fffdef);
+  z-index: 2;
 }
 
 .experiencegallery:hover .experstar-6 {
-    top: 5%; 
-    left: 50%; 
-    width: 5px;
-    height: auto;
-    filter: drop-shadow(0 0 10px #fffdef);
-    z-index: 2;
+  top: 5%; 
+  left: 50%; 
+  width: 5px;
+  height: auto;
+  filter: drop-shadow(0 0 10px #fffdef);
+  z-index: 2;
 }
 
 .experfil0 {
-    fill: #fffdef;
-} */
+  fill: #fffdef;
+}
 
-/* Isi Experience Gallery*/
-
-/* .isiexper2 {
+/* Isi Experience Gallery */
+.isiexper2 {
   display: flex;
   flex-wrap: wrap; 
   justify-content: space-between; 
@@ -732,6 +1060,7 @@ body {
   margin-left: 20px; 
   margin-right: 20px;
   border-radius: 9px;
+  box-sizing: border-box; /* Pastikan padding dan border tidak mengubah ukuran elemen */
 }
 
 .container2:hover {
@@ -760,18 +1089,38 @@ body {
   font-size: 16px;
   margin-right: 20px;
   margin-top: 20px;
-} */
+}
+
+/* Media Query untuk Responsif */
+@media (max-width: 768px) {
+  .container2 {
+      width: calc(100% - 40px); /* Lebar penuh dengan margin */
+      height: 200px; /* Biarkan tinggi otomatis untuk konten */
+  }
+
+  .gambarexper1 {
+      width: 170px; /* Gambar mengambil lebar penuh */
+      height: 150px; /* Tinggi otomatis untuk mempertahankan rasio aspek */
+      margin: 10px; /* Menghapus margin untuk gambar */
+  }
+  
+  .isiexper2 {
+      justify-content: center; /* Menyusun item di tengah */
+  }
+}
+
 
 
 /*My Skill*/
 .myskill {
-    position: relative;
-    padding: 12px 35px;
-    font-size: 17px;
-    font-weight: 500;
-    color: white;
-    transition: all 0.3s ease-in-out;
-    cursor: pointer;
+  position: relative;
+  padding: 12px 35px;
+  font-size: 17px;
+  font-weight: 500;
+  text-decoration: none;
+  color: white;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
 }
 
 .myskill .skillstar-1,
@@ -780,18 +1129,19 @@ body {
 .myskill .skillstar-4,
 .myskill .skillstar-5,
 .myskill .skillstar-6 {
-    position: absolute;
-    top: 20%;
-    left: 20%;
-    width: auto;
-    height: auto;
-    filter: drop-shadow(0 0 0 rgb(30, 39, 51)); 
-    z-index: -5;
-    transition: all 1s cubic-bezier(0.05, 0.83, 0.43, 0.96);
+  position: absolute;
+  top: 20%;
+  left: 20%;
+  width: auto;
+  height: auto;
+  filter: drop-shadow(0 0 0 rgb(30, 39, 51)); 
+  z-index: -5;
+  transition: all 1s cubic-bezier(0.05, 0.83, 0.43, 0.96);
+  fill: #fff; /* Menambahkan warna putih */
 }
 
 .myskill:hover {
-    color: #fec195; 
+  color: #fec195; 
 }
 
 .myskill:hover .skillstar-1,
@@ -800,67 +1150,117 @@ body {
 .myskill:hover .skillstar-4,
 .myskill:hover .skillstar-5,
 .myskill:hover .skillstar-6 {
-    filter: drop-shadow(0 0 0 #fff); 
-    z-index: 2;
+  filter: drop-shadow(0 0 0 #fff); 
+  z-index: 2;
+  fill: #fff; /* Pastikan berwarna putih saat hover */
 }
 
 .myskill:hover .skillstar-1 {
-    top: 5%; 
-    left: -2%; 
-    width: 25px;
-    height: auto;
-    filter: drop-shadow(0 0 10px #fffdef);
-    z-index: 2;
+  top: 5%; 
+  left: -2%; 
+  width: 25px;
+  height: auto;
+  filter: drop-shadow(0 0 10px #fffdef);
+  z-index: 2;
 }
 
 .myskill:hover .skillstar-2 {
-    top: -25%; 
-    left: 30%; 
-    width: 15px;
-    height: auto;
-    filter: drop-shadow(0 0 10px #fffdef);
-    z-index: 2;
+  top: -25%; 
+  left: 30%; 
+  width: 15px;
+  height: auto;
+  filter: drop-shadow(0 0 10px #fffdef);
+  z-index: 2;
 }
 
 .myskill:hover .skillstar-3 {
-    top: 70%; 
-    left: 30%; 
-    width: 5px;
-    height: auto;
-    filter: drop-shadow(0 0 10px #fffdef);
-    z-index: 2;
+  top: 70%; 
+  left: 30%; 
+  width: 5px;
+  height: auto;
+  filter: drop-shadow(0 0 10px #fffdef);
+  z-index: 2;
 }
 
 .myskill:hover .skillstar-4 {
-    top: 70%; 
-    left: 70%; 
-    width: 8px;
-    height: auto;
-    filter: drop-shadow(0 0 10px #fffdef);
-    z-index: 2;
+  top: 70%; 
+  left: 70%; 
+  width: 8px;
+  height: auto;
+  filter: drop-shadow(0 0 10px #fffdef);
+  z-index: 2;
 }
 
 .myskill:hover .skillstar-5 {
-    top: -10%; 
-    left: 80%; 
-    width: 15px;
-    height: auto;
-    filter: drop-shadow(0 0 10px #fffdef);
-    z-index: 2;
+  top: -10%; 
+  left: 80%; 
+  width: 15px;
+  height: auto;
+  filter: drop-shadow(0 0 10px #fffdef);
+  z-index: 2;
 }
 
 .myskill:hover .skillstar-6 {
-    top: 5%; 
-    left: 50%; 
-    width: 5px;
-    height: auto;
-    filter: drop-shadow(0 0 10px #fffdef);
-    z-index: 2;
+  top: 5%; 
+  left: 50%; 
+  width: 5px;
+  height: auto;
+  filter: drop-shadow(0 0 10px #fffdef);
+  z-index: 2;
 }
 
 .skillfil0 {
-    fill: #fffdef;
+  fill: #fffdef;
 }
+
+
+/* Media Query for Mobile Responsiveness */
+@media (max-width: 768px) {
+  .myskill {
+      padding: 10px 20px;
+      font-size: 15px;
+  }
+
+  .myskill .skillstar-1,
+  .myskill .skillstar-2,
+  .myskill .skillstar-3,
+  .myskill .skillstar-4,
+  .myskill .skillstar-5,
+  .myskill .skillstar-6 {
+      transition: all 0.8s cubic-bezier(0.05, 0.83, 0.43, 0.96); /* Mempercepat transisi di mobile */
+  }
+
+  .myskill:hover .skillstar-1 {
+    top: 5%;
+    left: -16%;
+  }
+
+  .myskill:hover .skillstar-2 {
+    top: -20%;
+    left: 35%;
+  }
+
+  .myskill:hover .skillstar-3 {
+    top: 80%;
+    left: 75%;
+  }
+
+  .myskill:hover .skillstar-4 {
+    top: 50%;
+    left: 75%;
+  }
+
+  .myskill:hover .skillstar-5 {
+    top: -5%;
+    left: 75%;
+  }
+
+  .myskill:hover .skillstar-6 {
+    top: 75%;
+    left: 30%;
+  }
+}
+
 
 
 /*Isian Skill*/
@@ -878,259 +1278,274 @@ body {
   color: white;
   font-size: 20px;
 }
-
-.box1,.box2,.box3,.box4,.box5,.box6,.box7,.box8 {
+.box1, 
+.box2, 
+.box3, 
+.box4, 
+.box5, 
+.box6, 
+.box7, 
+.box8 {
   background-color: rgb(30, 39, 51);
   border-radius: 9px;
   width: 150px;
   height: 150px;
-  margin-left: 45px;
+  margin: 30px; /* Mengganti margin-left untuk spacing yang lebih seragam */
   box-shadow: -1px 1px 15px rgb(74, 40, 105);
+  display: flex; /* Menggunakan flex untuk mengatur isi box */
+  flex-direction: column; /* Mengatur isi box menjadi kolom */
+  align-items: center; /* Mengatur isi box berada di tengah secara horizontal */
+  justify-content: center; /* Mengatur isi box berada di tengah secara vertikal */
 }
 
-.box1:hover,
-.box2:hover,
-.box3:hover,
-.box4:hover,
-.box5:hover,
-.box6:hover,
-.box7:hover,
+.box1:hover, 
+.box2:hover, 
+.box3:hover, 
+.box4:hover, 
+.box5:hover, 
+.box6:hover, 
+.box7:hover, 
 .box8:hover {
   background-color: #0b487a;
   color: #000; 
   transform: scale(1.05); 
 }
 
-.gambarbox1 {
-  width: 130px;
-  height: 100px;
-  margin-left: 8px;
-  margin-top: 13px;
-}
-
+.gambarbox1, 
 .gambarbox2 {
   width: 130px;
   height: 100px;
-  margin-left: 8px;
-  margin-top: 13px;
-}
-
-.gambarbox3 {
-  width: 100px;
-  height: 100px;
-  margin-left: 25px;
-  margin-top: 13px;
-}
+} 
 
 .gambarbox4 {
-  width: 110px;
-  height: 100px;
-  margin-left: 20px;
-  margin-top: 13px;
+  width: 115px;
+  height: 110px;
 }
 
 .gambarbox5 {
-  width: 100px;
-  height: 60px;
-  margin-left: 25px;
-  margin-top: 30px;
+  width: 130px;
+  height: 90px;
 }
 
-.gambarbox6 {
-  width: 100px;
-  height: 100px;
-  margin-left: 25px;
-  margin-top: 13px;
-}
-
-.nametag1 {
-  color: white;
-  margin-left: 50px;
-  margin-top: 3px;
-  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
-}
-
-.nametag2 {
-  color: white;
-  margin-left: 60px;
-  margin-top: 3px;
-  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
-}
-
-.nametag3 {
-  color: white;
-  margin-left: 40px;
-  margin-top: 2px;
-  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
-}
-
-.nametag4 {
-  color: white;
-  margin-left: 40px;
-  margin-top: 2px;
-  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
-}
-
-.nametag5 {
-  color: white;
-  margin-left: 60px;
-  margin-top: 25px;
-  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
-}
-
-.nametag6 {
-  color: white;
-  font-size: 14px;
-  margin-left: 27px;
-  margin-top: 2px;
-  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
-}
-
-/*Box Bawah*/
-.isiskill3 {
-  display: flex;
-  justify-content: center;
-  margin-right: 95px;
-}
-.box7,.box8 {
-  background-color: rgb(30, 39, 51);
-  width: 150px;
-  height: 150px;
-  margin-left: 45px;
-  box-shadow: -1px 1px 15px rgb(74, 40, 105);
-  margin-top: 20px;
-}
-
-.gambarbox7 {
-  width: 100px;
-  height: 100px;
-  margin-left: 25px;
-  margin-top: 13px;
-}
-
+.gambarbox3,  
+.gambarbox6, 
+.gambarbox7, 
 .gambarbox8 {
-  width: 100px;
-  height: 100px;
-  margin-left: 25px;
-  margin-top: 13px;
+  width: 100px; /* Atur lebar gambar menjadi sama untuk konsistensi */
+  height: 100px; /* Tinggi gambar */
+  margin-top: 10px; /* Margin atas untuk jarak antara gambar dan nama */
 }
 
-.nametag7 {
-  color: white;
-  margin-left: 35px;
-  margin-top: 2px;
-  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
-}
-
+.nametag1, 
+.nametag2, 
+.nametag3, 
+.nametag4, 
+.nametag5, 
+.nametag6, 
+.nametag7, 
 .nametag8 {
   color: white;
-  margin-left: 53px;
-  margin-top: 2px;
-  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+  margin-top: 5px; /* Mengatur jarak atas untuk konsistensi */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center; /* Mengatur teks agar berada di tengah */
 }
+
+/* Box Bawah */
+.isiskill3 {
+  display: flex;
+  justify-content: center; /* Mengatur box agar berada di tengah */
+  flex-wrap: wrap; /* Membuat box berbaris ke bawah jika tidak muat di satu baris */
+}
+
+
+/* Media Query untuk Responsif */
+@media screen and (max-width: 600px) {
+  .box1, .box2, .box3, .box4, .box5, .box6, .box7, .box8 {
+    width: 90%; /* Lebar box menjadi 90% pada layar kecil */
+    max-width: 150px; /* Maksimal lebar box */
+    margin: 10px auto; /* Margin otomatis untuk posisi tengah */
+  }
+
+  .gambarbox1,
+  .gambarbox2 {
+    width: 130px; /* Lebar gambar untuk perangkat kecil */
+    height: 100px; /* Tinggi gambar */
+
+  }
+
+  .gambarbox5 {
+    width: 120px; /* Lebar gambar untuk perangkat kecil */
+    height: 80px; /* Tinggi gambar */
+  }
+  .gambarbox3,
+  .gambarbox4,
+  .gambarbox6,
+  .gambarbox7,
+  .gambarbox8 {
+    width: 80px; /* Lebar gambar untuk perangkat kecil */
+    height: 80px; /* Tinggi gambar */
+  }
+}
+
+
+
 
 
 /*Education*/
 .education {
-    position: relative;
-    padding: 12px 35px; 
-    font-size: 17px;
-    font-weight: 500;
-    color: white;
-    transition: all 0.3s ease-in-out;
-    cursor: pointer;
-    text-decoration: none; 
-    margin-right: 20px; 
-
+  position: relative;
+  padding: 12px 35px; 
+  font-size: 17px;
+  font-weight: 500;
+  color: white;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+  text-decoration: none; 
+  margin-right: 20px; 
 }
+
+.education .edustar-1,
+.education .edustar-2,
+.education .edustar-3,
+.education .edustar-4,
+.education .edustar-5,
+.education .edustar-6 {
+  position: absolute;
+  top: 20%;
+  left: 20%;
+  width: auto;
+  height: auto;
+  filter: drop-shadow(0 0 0 rgb(30, 39, 51)); 
+  z-index: -5;
+  transition: all 1s cubic-bezier(0.05, 0.83, 0.43, 0.96);
+  fill: #fff; /* Ubah bintang menjadi putih */
+}
+
+.education:hover {
+  color: #fec195; 
+}
+
+.education:hover .edustar-1,
+.education:hover .edustar-2,
+.education:hover .edustar-3,
+.education:hover .edustar-4,
+.education:hover .edustar-5,
+.education:hover .edustar-6 {
+  filter: drop-shadow(0 0 0 #fff); 
+  z-index: 2;
+}
+
+.education:hover .edustar-1 {
+  top: 5%; 
+  left: -2%; 
+  width: 25px;
+  height: auto;
+  filter: drop-shadow(0 0 10px #fffdef);
+  z-index: 2;
+}
+
+.education:hover .edustar-2 {
+  top: -25%; 
+  left: 30%; 
+  width: 15px;
+  height: auto;
+  filter: drop-shadow(0 0 10px #fffdef);
+  z-index: 2;
+}
+
+.education:hover .edustar-3 {
+  top: 70%; 
+  left: 30%; 
+  width: 5px;
+  height: auto;
+  filter: drop-shadow(0 0 10px #fffdef);
+  z-index: 2;
+}
+
+.education:hover .edustar-4 {
+  top: 70%; 
+  left: 70%; 
+  width: 8px;
+  height: auto;
+  filter: drop-shadow(0 0 10px #fffdef);
+  z-index: 2;
+}
+
+.education:hover .edustar-5 {
+  top: -10%; 
+  left: 80%; 
+  width: 15px;
+  height: auto;
+  filter: drop-shadow(0 0 10px #fffdef);
+  z-index: 2;
+}
+
+.education:hover .edustar-6 {
+  top: 5%; 
+  left: 50%; 
+  width: 5px;
+  height: auto;
+  filter: drop-shadow(0 0 10px #fffdef);
+  z-index: 2;
+}
+
+.edufil0 {
+  fill: #fffdef;
+}
+
+/* Media Query for Mobile Responsiveness */
+/* Media Query for Mobile Responsiveness */
+@media (max-width: 768px) {
+  .education {
+    padding: 10px 15px;
+    font-size: 15px; /* Ubah ukuran font untuk mobile */
+    margin-right: 10px; /* Ubah margin untuk mobile */
+    position: relative; /* Tambahkan relative position untuk child elements */
+  }
+
   .education .edustar-1,
   .education .edustar-2,
   .education .edustar-3,
   .education .edustar-4,
   .education .edustar-5,
   .education .edustar-6 {
-    position: absolute;
-    top: 20%;
-    left: 20%;
-    width: auto;
-    height: auto;
-    filter: drop-shadow(0 0 0 rgb(30, 39, 51)); 
-    z-index: -5;
-    transition: all 1s cubic-bezier(0.05, 0.83, 0.43, 0.96);
-  }
-  
-  .education:hover {
-    color: #fec195; 
-  }
-  
-  .education:hover .edustar-1,
-  .education:hover .edustar-2,
-  .education:hover .edustar-3,
-  .education:hover .edustar-4,
-  .education:hover .edustar-5,
-  .education:hover .edustar-6 {
-    filter: drop-shadow(0 0 0 #fff); 
-    z-index: 2;
-  }
-  
-  .education:hover .edustar-1 {
-    top: 5%; 
-    left: -2%; 
-    width: 25px;
-    height: auto;
-    filter: drop-shadow(0 0 10px #fffdef);
-    z-index: 2;
-  }
-  
-  .education:hover .edustar-2 {
-    top: -25%; 
-    left: 30%; 
-    width: 15px;
-    height: auto;
-    filter: drop-shadow(0 0 10px #fffdef);
-    z-index: 2;
-  }
-  
-  .education:hover .edustar-3 {
-    top: 70%; 
-    left: 30%; 
-    width: 5px;
-    height: auto;
-    filter: drop-shadow(0 0 10px #fffdef);
-    z-index: 2;
-  }
-  
-  .education:hover .edustar-4 {
-    top: 70%; 
-    left: 70%; 
-    width: 8px;
-    height: auto;
-    filter: drop-shadow(0 0 10px #fffdef);
-    z-index: 2;
-  }
-  
-  .education:hover .edustar-5 {
-    top: -10%; 
-    left: 80%; 
-    width: 15px;
-    height: auto;
-    filter: drop-shadow(0 0 10px #fffdef);
-    z-index: 2;
-  }
-  
-  .education:hover .edustar-6 {
-    top: 5%; 
-    left: 50%; 
-    width: 5px;
-    height: auto;
-    filter: drop-shadow(0 0 10px #fffdef);
-    z-index: 2;
-  }
-  
-  .edufil0 {
-    fill: #fffdef;
+    transition: all 0.8s cubic-bezier(0.05, 0.83, 0.43, 0.96); /* Mempercepat transisi di mobile */
+    position: absolute; /* Pastikan bintang bersifat absolut untuk penempatan */
   }
 
+  .education:hover .edustar-1 {
+    top: 5%;
+    left: -16%;
+  }
+
+  .education:hover .edustar-2 {
+    top: -20%;
+    left: 35%;
+  }
+
+  .education:hover .edustar-3 {
+    top: 80%;
+    left: 75%;
+  }
+
+  .education:hover .edustar-4 {
+    top: 50%;
+    left: 75%;
+  }
+
+  .education:hover .edustar-5 {
+    top: -5%;
+    left: 75%;
+  }
+
+  .education:hover .edustar-6 {
+    top: 75%;
+    left: 30%;
+  }
+}
+
+  
+/*isian education*/
 .juduledu1 {
   margin-top: 20px;
   color:  #fec195;
@@ -1146,8 +1561,8 @@ body {
 .gambaredu1 {
   float: left;
   clear: left;
-  width: 350px;
-  height: 400px;
+  width: 250px;
+  height: 300px;
   margin-right: 250px;
   margin-left: 30px;
 }
@@ -1192,7 +1607,7 @@ body {
   width: 600px;
   height: 1px;
   float: right;
-  margin-right: 33px;
+  margin-right: 60px;
 }
 
 .ketedu4 {
@@ -1230,3 +1645,53 @@ body {
   opacity: 1;
   transform: translateY(0);
 }
+/* Media Query untuk Responsivitas */
+@media (max-width: 768px) {
+  .juduledu1 {
+    font-size: 20px; /* Ukuran font lebih kecil untuk mobile */
+    padding-left: 20px; /* Menambahkan padding kiri untuk memberi jarak dari tepi */
+    padding-right: 20px; /* Menambahkan padding kanan agar simetris */
+  }
+
+  .juduledu2 {
+    font-size: 18px; /* Ukuran font lebih kecil untuk mobile */
+    padding-left: 20px; /* Menambahkan padding kiri */
+    padding-right: 20px; /* Menambahkan padding kanan */
+  }
+
+  .gambaredu1 {
+    width: 60%; /* Mengatur lebar gambar menjadi 60% dari lebar kontainer */
+    max-width: 300px; /* Membatasi lebar maksimum gambar menjadi lebih kecil */
+    height: auto; /* Mengatur tinggi otomatis untuk menjaga aspek rasio */
+    margin-left: 190px;
+    margin-bottom: 30px;
+  }
+
+  .containerpembatas {
+    width: 88%; /* Lebar kontainer menyesuaikan layar */
+    display: flex; /* Mengaktifkan flexbox */
+    flex-direction: column; /* Mengatur orientasi kolom */
+    align-items: center; /* Memusatkan item di dalam kontainer */
+    text-align: center; /* Memusatkan teks dalam kontainer */
+  }
+
+  .ketedu1,
+  .ketedu4 {
+    font-size: 18px;
+    margin-left: 0; /* Menghapus margin kiri untuk memusatkan teks */
+    padding-left: 20px; /* Menambahkan padding kiri untuk memberi jarak */
+    padding-right: 20px; /* Menambahkan padding kanan agar simetris */
+  }
+
+  .ketedu2,
+  .ketedu3,
+  .ketedu5,
+  .ketedu6 {
+    font-size: 16px; /* Ukuran font lebih kecil untuk mobile */
+    margin-left: 0; /* Menghapus margin kiri untuk memusatkan teks */
+    padding-left: 20px; /* Menambahkan padding kiri */
+    padding-right: 20px; /* Menambahkan padding kanan */
+  }
+}
+
+
