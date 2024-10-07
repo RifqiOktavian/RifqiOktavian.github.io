@@ -22,6 +22,7 @@ body {
   margin: 20px; /* Menambahkan margin untuk menghilangkan jarak di luar menu */
   display: flex; /* Mengubah display menjadi flex untuk menyusun item dalam satu baris */
   justify-content: flex-start; /* Menyusun item ke kiri */
+  
 }
 
 .aboutme, 
@@ -44,25 +45,73 @@ body {
   text-decoration: underline; /* Menambahkan garis bawah saat hover */
 }
 
-@media (max-width: 768px) {
+@media (max-width: 480px) {
   .menu {
-    justify-content: space-between; /* Menjaga jarak antar item di perangkat mobile */
-    margin: 10px; /* Mengurangi margin di luar menu */
+    display: flex;
+    flex-direction: row; /* Berjejer dari kiri ke kanan */
+    flex-wrap: wrap; /* Membungkus ke baris berikutnya jika tidak muat */
+    margin: 5px;
   }
 
   .aboutme, 
   .biodata, 
   .experiencegallery, 
   .myskills {
-    margin-right: 10px; /* Menjaga jarak antar item menu */
-    margin-bottom: 0; /* Menghapus margin bawah di perangkat mobile */
-    font-size: 16px; /* Mengatur ukuran font lebih kecil jika diperlukan */
+    margin-right: 3px; /* Mengurangi jarak kanan antar tombol */
+    margin-bottom: 0; /* Tidak ada jarak bawah */
+    font-size: 11px; /* Mengurangi ukuran font pada perangkat kecil */
   }
+
   .education {
-    margin-right: 0; /* Menghapus margin kanan untuk Education */
-    margin-top: 0; /* Menghapus jarak atas untuk Education */
-    width: 100%; /* Memastikan Education mengambil lebar penuh */
-    text-align: left; /* Mengatur teks ke kiri */
+    order: 2; /* Menetapkan urutan agar education muncul di bawah */
+    width: 100%; /* Mengambil lebar penuh baris */
+    margin-top: 3px; /* Mengurangi jarak atas education */
+    margin-right: 0; /* Tidak ada margin kanan */
+    display: block; /* Memastikan education berada di baris baru */
+  }
+}
+
+@media (max-width: 768px) {
+  .menu {
+    justify-content: space-between;
+    margin: 10px;
+  }
+
+  .aboutme, 
+  .biodata, 
+  .experiencegallery, 
+  .myskills {
+    margin-right: 10px;
+    margin-bottom: 0;
+    font-size: 16px;
+  }
+
+  .education {
+    margin-right: 0;
+    margin-top: 0;
+    width: 100%;
+    text-align: left;
+  }
+}
+
+/* Medium Devices (max-width: 992px) - Tablet Landscape */
+@media (max-width: 992px) {
+  .menu {
+    justify-content: space-evenly;
+    margin: 15px;
+  }
+
+  .aboutme, 
+  .biodata, 
+  .experiencegallery, 
+  .myskills {
+    margin-right: 15px;
+    font-size: 17px; /* Sedikit lebih besar di layar tablet */
+  }
+
+  .education {
+    width: 100%;
+    text-align: left;
   }
 }
 
@@ -914,10 +963,11 @@ margin-left: 40px;
     }
 
     .container1 {
-      width: 82%; /* Lebar menyesuaikan dengan layar mobile */
+      width: 92%; /* Lebar menyesuaikan dengan layar mobile */
       height: auto; /* Sesuaikan tinggi secara otomatis */
       flex-direction: row; /* Biarkan kolom tetap sejajar */
-      margin-top: 2px;
+      margin-top: 70px;
+      margin-right: 15px;
   }
   
   .bariskiri, .bariskanan {
@@ -937,7 +987,7 @@ margin-left: 40px;
 
 
 /* Experience Gallery */
- .experiencegallery {
+ /*.experiencegallery {
   position: relative;
   padding: 12px 35px;
   font-size: 17px;
@@ -1036,7 +1086,7 @@ margin-left: 40px;
 }
 
 /* Isi Experience Gallery */
-.isiexper2 {
+/*.isiexper2 {
   display: flex;
   flex-wrap: wrap; 
   justify-content: space-between; 
@@ -1060,7 +1110,7 @@ margin-left: 40px;
   margin-left: 20px; 
   margin-right: 20px;
   border-radius: 9px;
-  box-sizing: border-box; /* Pastikan padding dan border tidak mengubah ukuran elemen */
+  box-sizing: border-box; /* Pastikan padding dan border tidak mengubah ukuran elemen 
 }
 
 .container2:hover {
@@ -1089,7 +1139,7 @@ margin-left: 40px;
   font-size: 16px;
   margin-right: 20px;
   margin-top: 20px;
-}
+} */
 
 /* Media Query untuk Responsif */
 @media (max-width: 768px) {
@@ -1108,6 +1158,7 @@ margin-left: 40px;
       justify-content: center; /* Menyusun item di tengah */
   }
 }
+*/
 
 
 
