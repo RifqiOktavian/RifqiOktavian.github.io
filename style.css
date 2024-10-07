@@ -74,29 +74,6 @@ body {
 @media (max-width: 768px) {
   .menu {
     justify-content: space-between;
-    margin: 10px;
-  }
-
-  .aboutme, 
-  .biodata, 
-  .experiencegallery, 
-  .myskills {
-    margin-right: 10px;
-    margin-bottom: 0;
-    font-size: 16px;
-  }
-
-  .education {
-    margin-right: 0;
-    margin-top: 0;
-    width: 100%;
-    text-align: left;
-  }
-}
-
-@media (max-width: 890px) {
-  .menu {
-    justify-content: space-between;
     margin: 15px;
   }
 
@@ -116,6 +93,7 @@ body {
     text-align: left;
   }
 }
+
 
 
 /* Medium Devices (max-width: 992px) - Tablet Landscape */
@@ -961,57 +939,6 @@ margin-left: 40px;
 /* Media Queries for Mobile */
 @media only screen and (max-width: 768px) {
   .biodata {
-      padding: 12px 15px; /* Mengurangi padding */
-      font-size: 16px; /* Mengurangi ukuran font */
-  }
-
-  .biodata1 {
-      font-size: 20px; /* Ukuran font lebih kecil */
-  }
-
-  .biodata2 {
-      font-size: 18px; /* Ukuran font lebih kecil */
-  }
-
-  .gambar2 {
-    width: 80%; /* Mengatur lebar gambar menjadi 80% dari kontainer */
-    max-width: 400px; /* Membatasi lebar maksimum gambar */
-    height: auto; /* Tinggi gambar otomatis untuk menjaga aspek rasio */
-    margin: 0 auto; /* Memusatkan gambar dengan margin otomatis */
-    margin-bottom: 20px; /* Jarak antara gambar dan teks */
-  }
-
-  .mybio, .ketbio {
-      margin-right: 0; /* Hapus margin kanan */
-      margin-left: 0; /* Hapus margin kiri */
-      width: auto; /* Otomatis lebar */
-
-    }
-
-    .container1 {
-      width: 92%; /* Lebar menyesuaikan dengan layar mobile */
-      height: auto; /* Sesuaikan tinggi secara otomatis */
-      flex-direction: row; /* Biarkan kolom tetap sejajar */
-      margin-top: 70px;
-      margin-right: 15px;
-  }
-  
-  .bariskiri, .bariskanan {
-      width: 45%; /* Pertahankan teks di kanan dan kiri */
-      margin: 0;
-  }
-  
-  .li1nama, .li1status, .li1nomor, .li2email, .li2jenkel, .li2umur {
-      font-size: 15px; /* Ukuran font lebih kecil pada mobile */
-  }
-  
-  .p1nama, .p1status, .p1nomor, .p2email, .p2jenkel, .p2umur {
-      font-size: 15px; /* Ukuran font lebih kecil pada mobile */
-  }
-}
-
-@media (min-width: 858px) and (max-width: 890px) {
-  .biodata {
     padding: 14px 20px; /* Sedikit lebih banyak padding dibanding ukuran lebih kecil */
     font-size: 18px; /* Ukuran font sedikit lebih besar */
   }
@@ -1060,6 +987,8 @@ margin-left: 40px;
     font-size: 16px; /* Ukuran font lebih besar dari layar kecil */
   }
 }
+
+
 
 
 
@@ -1776,54 +1705,6 @@ margin-left: 40px;
 /* Media Query untuk Responsivitas */
 @media (max-width: 768px) {
   .juduledu1 {
-    font-size: 20px; /* Ukuran font lebih kecil untuk mobile */
-    padding-left: 20px; /* Menambahkan padding kiri untuk memberi jarak dari tepi */
-    padding-right: 20px; /* Menambahkan padding kanan agar simetris */
-  }
-
-  .juduledu2 {
-    font-size: 18px; /* Ukuran font lebih kecil untuk mobile */
-    padding-left: 20px; /* Menambahkan padding kiri */
-    padding-right: 20px; /* Menambahkan padding kanan */
-  }
-
-  .gambaredu1 {
-    width: 60%; /* Mengatur lebar gambar menjadi 60% dari lebar kontainer */
-    max-width: 300px; /* Membatasi lebar maksimum gambar menjadi lebih kecil */
-    height: auto; /* Mengatur tinggi otomatis untuk menjaga aspek rasio */
-    margin-left: 190px;
-    margin-bottom: 30px;
-  }
-
-  .containerpembatas {
-    width: 88%; /* Lebar kontainer menyesuaikan layar */
-    display: flex; /* Mengaktifkan flexbox */
-    flex-direction: column; /* Mengatur orientasi kolom */
-    align-items: center; /* Memusatkan item di dalam kontainer */
-    text-align: center; /* Memusatkan teks dalam kontainer */
-  }
-
-  .ketedu1,
-  .ketedu4 {
-    font-size: 18px;
-    margin-left: 0; /* Menghapus margin kiri untuk memusatkan teks */
-    padding-left: 20px; /* Menambahkan padding kiri untuk memberi jarak */
-    padding-right: 20px; /* Menambahkan padding kanan agar simetris */
-  }
-
-  .ketedu2,
-  .ketedu3,
-  .ketedu5,
-  .ketedu6 {
-    font-size: 16px; /* Ukuran font lebih kecil untuk mobile */
-    margin-left: 0; /* Menghapus margin kiri untuk memusatkan teks */
-    padding-left: 20px; /* Menambahkan padding kiri */
-    padding-right: 20px; /* Menambahkan padding kanan */
-  }
-}
-
-@media (min-width: 858px) and (max-width: 890px) {
-  .juduledu1 {
     font-size: 22px; /* Ukuran font sedikit lebih besar */
     padding-left: 30px; /* Menambahkan padding kiri */
     padding-right: 30px; /* Menambahkan padding kanan */
@@ -1870,5 +1751,7 @@ margin-left: 40px;
     padding-right: 30px; /* Menambahkan padding kanan */
   }
 }
+
+
 
 
