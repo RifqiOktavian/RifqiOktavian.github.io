@@ -94,6 +94,30 @@ body {
   }
 }
 
+@media (max-width: 890px) {
+  .menu {
+    justify-content: space-between;
+    margin: 15px;
+  }
+
+  .aboutme, 
+  .biodata, 
+  .experiencegallery, 
+  .myskills {
+    margin-right: 15px; 
+    margin-bottom: 5px; 
+    font-size: 18px; 
+  }
+
+  .education {
+    margin-right: 0;
+    margin-top: 5px; 
+    width: 100%;
+    text-align: left;
+  }
+}
+
+
 /* Medium Devices (max-width: 992px) - Tablet Landscape */
 @media (max-width: 992px) {
   .menu {
@@ -318,6 +342,7 @@ body {
   align-items: center; /* Menyelaraskan elemen secara vertikal */
   justify-content: space-between; /* Memberikan jarak antara gambar dan teks */
   margin-top: 30px;
+  font-size: 18px;
 }
 
 .gambar1 {
@@ -361,6 +386,7 @@ body {
 .ketjudul {
   color: white;
   word-wrap: break-word; /* Membungkus kata panjang */
+  margin-bottom: 40px;
 }
 
 /* Media Queries untuk Responsif */
@@ -984,10 +1010,62 @@ margin-left: 40px;
   }
 }
 
+@media (min-width: 858px) and (max-width: 890px) {
+  .biodata {
+    padding: 14px 20px; /* Sedikit lebih banyak padding dibanding ukuran lebih kecil */
+    font-size: 18px; /* Ukuran font sedikit lebih besar */
+  }
+
+  .biodata1 {
+    font-size: 22px; /* Ukuran font lebih besar */
+  }
+
+  .biodata2 {
+    font-size: 20px; /* Ukuran font lebih besar */
+  }
+
+  .gambar2 {
+    width: 75%; /* Lebar gambar menjadi 75% dari kontainer */
+    max-width: 450px; /* Membatasi lebar maksimum gambar */
+    height: auto; /* Tinggi gambar otomatis */
+    display: block; /* Memastikan gambar adalah block element */
+    margin: 0 auto; /* Memusatkan gambar secara horizontal */
+    margin-bottom: 25px; /* Jarak bawah gambar lebih besar */
+  }
+
+  .mybio, .ketbio {
+    margin-right: 0; /* Hapus margin kanan */
+    margin-left: 0; /* Hapus margin kiri */
+    width: auto; /* Otomatis lebar */
+  }
+
+  .container1 {
+    width: 90%; /* Lebar menyesuaikan dengan layar */
+    height: auto; /* Sesuaikan tinggi otomatis */
+    flex-direction: row; /* Biarkan elemen tetap sejajar */
+    margin-top: 60px;
+    margin-right: 10px;
+  }
+
+  .bariskiri, .bariskanan {
+    width: 48%; /* Lebar kolom kiri dan kanan diatur */
+    margin: 0;
+  }
+
+  .li1nama, .li1status, .li1nomor, .li2email, .li2jenkel, .li2umur {
+    font-size: 16px; /* Ukuran font lebih besar dari layar kecil */
+  }
+
+  .p1nama, .p1status, .p1nomor, .p2email, .p2jenkel, .p2umur {
+    font-size: 16px; /* Ukuran font lebih besar dari layar kecil */
+  }
+}
+
+
 
 
 /* Experience Gallery */
- /*.experiencegallery {
+/* .experiencegallery {
   position: relative;
   padding: 12px 35px;
   font-size: 17px;
@@ -1110,10 +1188,10 @@ margin-left: 40px;
   margin-left: 20px; 
   margin-right: 20px;
   border-radius: 9px;
-  box-sizing: border-box; /* Pastikan padding dan border tidak mengubah ukuran elemen 
+  box-sizing: border-box; 
 }
-
-.container2:hover {
+*/
+/*.container2:hover {
   background-color: #0b487a;
   color: #000; 
   transform: scale(1.05); 
@@ -1142,23 +1220,22 @@ margin-left: 40px;
 } */
 
 /* Media Query untuk Responsif */
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
   .container2 {
-      width: calc(100% - 40px); /* Lebar penuh dengan margin */
-      height: 200px; /* Biarkan tinggi otomatis untuk konten */
+      width: calc(100% - 40px); 
+      height: 200px; 
   }
 
   .gambarexper1 {
-      width: 170px; /* Gambar mengambil lebar penuh */
-      height: 150px; /* Tinggi otomatis untuk mempertahankan rasio aspek */
-      margin: 10px; /* Menghapus margin untuk gambar */
+      width: 170px; 
+      height: 150px; 
+      margin: 10px; 
   }
   
   .isiexper2 {
-      justify-content: center; /* Menyusun item di tengah */
+      justify-content: center; 
   }
-}
-*/
+}*/
 
 
 
@@ -1742,6 +1819,55 @@ margin-left: 40px;
     margin-left: 0; /* Menghapus margin kiri untuk memusatkan teks */
     padding-left: 20px; /* Menambahkan padding kiri */
     padding-right: 20px; /* Menambahkan padding kanan */
+  }
+}
+
+@media (min-width: 858px) and (max-width: 890px) {
+  .juduledu1 {
+    font-size: 22px; /* Ukuran font sedikit lebih besar */
+    padding-left: 30px; /* Menambahkan padding kiri */
+    padding-right: 30px; /* Menambahkan padding kanan */
+  }
+
+  .juduledu2 {
+    font-size: 20px; /* Ukuran font sedikit lebih besar */
+    padding-left: 30px; /* Menambahkan padding kiri */
+    padding-right: 30px; /* Menambahkan padding kanan */
+  }
+
+  .gambaredu1 {
+    width: 70%; /* Mengatur lebar gambar menjadi 70% dari kontainer */
+    max-width: 350px; /* Membatasi lebar maksimum gambar */
+    height: auto; /* Tinggi otomatis untuk menjaga aspek rasio */
+    margin-left: 230px; /* Memastikan gambar tetap di tengah */
+    margin-bottom: 30px; /* Menambahkan margin bawah */
+
+  }
+
+  .containerpembatas {
+    width: 90%; /* Lebar kontainer sedikit lebih besar */
+    display: flex; /* Flexbox aktif */
+    flex-direction: column; /* Orientasi kolom */
+    align-items: center; /* Memusatkan item di kontainer */
+    text-align: center; /* Memusatkan teks dalam kontainer */
+  }
+
+  .ketedu1,
+  .ketedu4 {
+    font-size: 20px; /* Ukuran font sedikit lebih besar */
+    margin-left: 0; /* Menghapus margin kiri */
+    padding-left: 30px; /* Menambahkan padding kiri */
+    padding-right: 30px; /* Menambahkan padding kanan */
+  }
+
+  .ketedu2,
+  .ketedu3,
+  .ketedu5,
+  .ketedu6 {
+    font-size: 18px; /* Ukuran font lebih besar dibanding versi mobile */
+    margin-left: 0; /* Menghapus margin kiri */
+    padding-left: 30px; /* Menambahkan padding kiri */
+    padding-right: 30px; /* Menambahkan padding kanan */
   }
 }
 
